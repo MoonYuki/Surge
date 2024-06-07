@@ -1,0 +1,11 @@
+#!name=指南针GPS
+
+#!desc=指南针GPS解锁
+
+#!author=MoonYuki
+
+[Script]
+指南针GPS=type=http-response,pattern=^http[s]?:\/\/compass.xinzhi.space\/api\/v1\/isVip,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/compass.js
+
+[MITM]
+hostname = %APPEND% compass.xinzhi.space

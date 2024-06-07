@@ -1,0 +1,8 @@
+#!name=票星球
+#!desc=票星球bp
+
+[Script]
+票星球=type=http-response,pattern=^https:\/\/m\.piaoxingqiu\.com\/cyy_gatewayapi\/show\/pub\/v5\/show\/[0-9a-fA-F]+\/session\/[0-9a-fA-F]+\/seat_plans,requires-body=1,script-path=https://raw.githubusercontent.com/MoonYuki/Script/master/BuyTickets/pxq.js
+
+[MITM]
+hostname = %APPEND% m.piaoxingqiu.com
