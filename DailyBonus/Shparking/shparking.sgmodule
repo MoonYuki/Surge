@@ -1,0 +1,16 @@
+#!name=上海停车签到
+
+#!desc=上海停车app自动签到脚本
+
+#!author=MoonYuki
+
+[Script]
+# 创建上海停车签到脚本
+上海停车签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://raw.githubusercontent.com/MoonYuki/Script/master/shparking-DailyBonus/shparking.js
+
+# 获取上海停车会话
+获取上海停车会话=type=http-request,pattern=^https?:\/\/api\.shanghai\-parking\.com\/sas\/shcx\/app\/score\/credits\-change,script-path=https://raw.githubusercontent.com/MoonYuki/Script/master/shparking-DailyBonus/shparking.js
+
+[MITM]
+
+hostname = %APPEND% api.shanghai-parking.com
