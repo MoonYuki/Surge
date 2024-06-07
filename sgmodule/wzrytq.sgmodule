@@ -1,0 +1,9 @@
+#!name=王者荣耀商户特权
+
+#!desc=王者荣耀商户特权解锁
+
+#!author=MoonYuki
+
+[Rule]
+DOMAIN,m.baidu.com,特权代理 // 王者荣耀特权规则
+DOMAIN,priv.igame.qq.com,特权代理 //王者荣耀特权规则
