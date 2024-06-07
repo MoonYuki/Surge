@@ -4,7 +4,6 @@ if (!$response){
   console.log('未获取正确response');
   $done();
 } else {
-  let jsondata = JSON.parse($response.body);
   if(url.includes("/passport/me")){
     let data = $response.body;
     // 定义一个键值对字典，用于批量替换
@@ -33,6 +32,7 @@ if (!$response){
     }
     $done({ body: data });
   } else {
+    let jsondata = JSON.parse($response.body);
     // 替换字段值的键值对字典
     const replacements = {
       "grade": "1",
@@ -45,6 +45,7 @@ if (!$response){
         jsondata[key] = value;
       }
     }
+    $done({ body: JSON.stringify(jsondata) });
   }
-  $done({ body: JSON.stringify(jsondata) });
 }
+$done();
