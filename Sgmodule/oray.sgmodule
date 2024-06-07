@@ -4,7 +4,7 @@
 
 [Script]
 oray.json=type=http-response,pattern=^https?:\/\/slapi\.oray\.net\/passport\/me,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Oray/oray.js
-oray.ad.json=type=http-response,pattern=^https?:\/\/user\-api\-v2\.oray\.com\/(users|services)\/\d+,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Oray/oray.js
+oray.ad.json=type=http-response,pattern=^https?:\/\/user\-api\-v2\.oray\.com\/(users|services)\/(\d+|used),requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Oray/oray.js
 
 [MITM]
 hostname = %APPEND% slapi.oray.net user-api-v2.oray.com
