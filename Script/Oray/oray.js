@@ -64,6 +64,28 @@ if (!$response){
       temp[keys[keys.length - 1]] = value;
     }
     $done({ body: JSON.stringify(jsondata) });
+  } else if(url.includes("/services/")){
+    let jsondata = JSON.parse($response.body);
+    // 定义替换字段的映射
+    const replacements = {
+      "serviceid": 23777030,
+      "createtime": 1716646553,
+      "expiredate": 1999324632,
+      "service_name":  {
+        "tc": "超級會員訂閱版",
+        "en": "Vip.",
+        "cn": "超级会员订阅版"
+      },
+      "expiredays": 999,
+      "level": 3,
+      "productid": 316002
+    };
+
+    // 执行替换
+    for (const [key, value] of Object.entries(replacements)) {
+      jsondata[key] = value;
+    }
+    $done({ body: JSON.stringify(jsondata) });
   } else {
     let jsondata = JSON.parse($response.body);
     // 替换字段值的键值对字典
