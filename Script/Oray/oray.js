@@ -31,6 +31,9 @@ if (!$response){
       data = data.replace(regex, `<data type="field" name="${key}">${value}</data>`);
     }
     $done({ body: data });
+  } else if(url.includes("/service/used")){
+    let jsondata = JSON.parse($response.body);
+    
   } else {
     let jsondata = JSON.parse($response.body);
     // 替换字段值的键值对字典
