@@ -4,7 +4,7 @@
 # 更新日期：2024.06.09
 # 版本：3.3
 #!arguments=url:encode url,reset_day:false,expire:false
-
+#!arguments-desc=url：encode后的机场节点链接\nreset_day：每月重置的日期，如1便填写1，默认false关闭该功能\nexpire：机场链接不带expire信息的，按照yyyy-MM-dd的格式。不希望显示到期信息也可以修改参数为false。\ntitle：自定义面板标题\nicon：自定义面板图标，内容为任意有效的 SF Symbol Name\ncolor：当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如#007aff
 
 [Panel]
 Sub_info = script-name=Sub_info,update-interval=3600
