@@ -3,7 +3,7 @@
 #!system=ios
 # 更新日期：2024.06.09
 # 版本：3.3
-#!arguments=url:encode后的机场节点链接,reset_day:false,expire:false
+#!arguments=url:encode url,reset_day:false,expire:false
 
 
 [Panel]
