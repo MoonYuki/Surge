@@ -3,7 +3,7 @@
 #!system=ios
 # 更新日期：2024.06.09
 # 版本：3.3
-#!arguments=url:encode后的机场节点链接,reset_day:1,expire:false,title:你机场名字,icon:externaldrive.fill.badge.icloud,color:#007aff
+#!arguments=url:encode后的机场节点链接,reset_day:1,expire:false,title:你机场名字,icon:externaldrive,color:#007aff
 #!arguments-desc=先将带有流量信息的节点订阅链接encode，用encode后的链接替换"url"参数的[encode后的机场节点链接]。\n可选参数 reset_day，后面的数字替换成流量每月重置的日期，如1号就写1，8号就写8。不加该参数默认1号为重置日期。\n可选参数 expire，机场链接不带expire信息的，可以手动传入expire参数，如"2022-02-01",注意一定要按照yyyy-MM-dd的格式。不希望显示到期信息也可以修改参数为false取消显示，默认为false。\n可选参数 title， 可以自定义标题。\n可选参数 icon， 可以自定义图标，内容为任意有效的 SF Symbol Name，如 bolt.horizontal.circle.fill，详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336。\n可选参数 color， 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：#007aff
 
 [Panel]
