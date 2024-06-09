@@ -12,13 +12,13 @@ let args = getArgs();
   let info = await getDataInfo(args.url);
   if (!info) $done();
   let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
-
+  let reset_day = args.reset_day;
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
   let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (resetDayLeft) {
+  if (resetDayLeft && reset_day !== "0") {
     content.push(`重置：剩余${resetDayLeft}天`);
   }
   if (expire && expire !== "false") {
