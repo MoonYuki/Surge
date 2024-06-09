@@ -52,7 +52,7 @@ function getArgs() {
 }
 
 function getUserInfo(url) {
-  let method = args.method || "head";
+  let method = args.method || "get";
   let request = { headers: { "User-Agent": "Quantumult%20X" }, url };
   return new Promise((resolve, reject) =>
     $httpClient[method](request, (err, resp) => {
