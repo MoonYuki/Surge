@@ -1,22 +1,22 @@
 /*
  * 由@mieqq编写
  * 原脚本地址：https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js
- * 由@Rabbit-Spec Key 修改
- * 更新日期：2023.02.20
+ * 由@Rabbit-Spec修改
+ * 更新日期：2024.06.09
  * 版本：1.6
 */
 
+let args = getArgs();
+
 (async () => {
-  let args = getArgs();
   let info = await getDataInfo(args.url);
   if (!info) $done();
   let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
-
-  let reset_day = arg.reset_day;
+  let reset_day = args.reset_day;
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用：${toPercent(used, total)} \t|  剩余：${toMultiply(total, used)}`];
+  let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft && reset_day !== "0") {
     content.push(`重置：剩余${resetDayLeft}天`);
@@ -25,7 +25,7 @@
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`到期：${formatTime(expire)}`);
   }
-  
+
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
@@ -33,7 +33,7 @@
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${bytesToSize(total)} | ${hour}:${minutes}`,
+    title: `${args.title} | ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
@@ -50,9 +50,10 @@ function getArgs() {
 }
 
 function getUserInfo(url) {
+  let method = args.method || "head";
   let request = { headers: { "User-Agent": "Quantumult%20X" }, url };
   return new Promise((resolve, reject) =>
-    $httpClient.get(request, (err, resp) => {
+    $httpClient[method](request, (err, resp) => {
       if (err != null) {
         reject(err);
         return;
@@ -61,7 +62,9 @@ function getUserInfo(url) {
         reject(resp.status);
         return;
       }
-      let header = Object.keys(resp.headers).find((key) => key.toLowerCase() === "subscription-userinfo");
+      let header = Object.keys(resp.headers).find(
+        (key) => key.toLowerCase() === "subscription-userinfo"
+      );
       if (header) {
         resolve(resp.headers[header]);
         return;
@@ -82,7 +85,7 @@ async function getDataInfo(url) {
 
   return Object.fromEntries(
     data
-      .match(/\w+=[\d.eE+]+/g)
+      .match(/\w+=[\d.eE+-]+/g)
       .map((item) => item.split("="))
       .map(([k, v]) => [k, Number(v)])
   );
@@ -114,40 +117,10 @@ function bytesToSize(bytes) {
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
 }
 
-function bytesToSizeNumber(bytes) {
-  if (bytes === 0) return "0";
-  let k = 1024;
-  let i = Math.floor(Math.log(bytes) / Math.log(k));
-  return (bytes / Math.pow(k, i)).toFixed(2);
-}
-
-function toPercent(num, total) {
-  return (Math.round((num / total) * 10000) / 100).toFixed(1) + "%";
-}
-
-
-function toMultiply(total, num) {
-  let totalDecimalLen, numDecimalLen, maxLen, multiple;
-  try {
-    totalDecimalLen = total.toString().split(".").length;
-  } catch (e) {
-    totalDecimalLen = 0;
-  }
-  try {
-    numDecimalLen = num.toString().split(".").length;
-  } catch (e) {
-    numDecimalLen = 0;
-  }
-  maxLen = Math.max(totalDecimalLen, numDecimalLen);
-  multiple = Math.pow(10, maxLen);
-  const numberSize = ((total * multiple - num * multiple) / multiple).toFixed(maxLen);
-  return bytesToSize(numberSize);
-}
-
 function formatTime(time) {
   let dateObj = new Date(time);
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return "到期：" + year + "." + month + "." + day + " ";
+  return year + "年" + month + "月" + day + "日";
 }
