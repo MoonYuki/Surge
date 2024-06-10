@@ -18,7 +18,7 @@ let args = getArgs();
   let expire = args.expire || info.expire;
   let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (resetDayLeft && reset_day !== "false") {
+  if (resetDayLeft && reset_day !== "0") {
     content.push(`重置：剩余${resetDayLeft}天`);
   }
   if (expire && expire !== "false") {
