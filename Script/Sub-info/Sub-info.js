@@ -18,18 +18,14 @@
   let expire = args.expire || info.expire;
   let content = [`已用：${toPercent(used, total)} \t|  剩余：${toMultiply(total, used)}`];
 
-  if (resetDayLeft || expire) {
-    if (resetDayLeft && expire && expire !== "false" && reset_day !== "0") {
-      if (/^[\d.]+$/.test(expire)) expire *= 1000;
-      content.push(`重置：${resetDayLeft}天 \t|  ${formatTime(expire)}`);
-    } else if (resetDayLeft && !expire && reset_day !== "0") {
-      content.push(`重置：${resetDayLeft}天`);
-    } else if (!resetDayLeft && expire) {
-      if (/^[\d.]+$/.test(expire)) expire *= 1000;
-      content.push(`到期：${formatTime(expire)}`);
-    }
+  if (resetDayLeft && reset_day !== "0") {
+    content.push(`重置：剩余${resetDayLeft}天`);
   }
-
+  if (expire && expire !== "false") {
+    if (/^[\d.]+$/.test(expire)) expire *= 1000;
+    content.push(`到期：${formatTime(expire)}`);
+  }
+  
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
