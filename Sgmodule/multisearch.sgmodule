@@ -30,7 +30,7 @@
 # bi+空格+关键词(Bing)
 ^https:\/\/duckduckgo\.com\/\?q=bi(\+|%20)([^&]+).+ https://www.bing.com/search?q=$2 302
 # tmdb+空格+关键词(tmdb)
-^https:\/\/duckduckgo\.com\/\?q=tmdb(\+|%20)([^&]+).+ https://www.themoviedb.org/search?q=$2 302
+^https:\/\/duckduckgo\.com\/\?q=tmdb(\+|%20)([^&]+).+ https://www.themoviedb.org/search?query=$2 302
 # 默认Google搜索
 ^https:\/\/duckduckgo\.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
