@@ -16,7 +16,7 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`已用：${toPercent(used, total)} \t|  剩余：${toMultiply(total, used)}`];
 
   if (resetDayLeft && reset_day !== "0") {
     content.push(`重置：剩余${resetDayLeft}天`);
@@ -115,6 +115,28 @@ function bytesToSize(bytes) {
   sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
+}
+
+function toMultiply(total, num) {
+  let totalDecimalLen, numDecimalLen, maxLen, multiple;
+  try {
+    totalDecimalLen = total.toString().split(".").length;
+  } catch (e) {
+    totalDecimalLen = 0;
+  }
+  try {
+    numDecimalLen = num.toString().split(".").length;
+  } catch (e) {
+    numDecimalLen = 0;
+  }
+  maxLen = Math.max(totalDecimalLen, numDecimalLen);
+  multiple = Math.pow(10, maxLen);
+  const numberSize = ((total * multiple - num * multiple) / multiple).toFixed(maxLen);
+  return bytesToSize(numberSize);
+}
+
+function toPercent(num, total) {
+  return (Math.round((num / total) * 10000) / 100).toFixed(1) + "%";
 }
 
 function formatTime(time) {
