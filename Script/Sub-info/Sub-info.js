@@ -2,7 +2,6 @@
  * 由@mieqq编写
  * 原脚本地址：https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js
  * 由@Rabbit-Spec修改
- * 由@MoonYuki优化
  * 更新日期：2024.06.09
  * 版本：1.6
 */
@@ -12,18 +11,17 @@ let args = getArgs();
 (async () => {
   let info = await getDataInfo(args.url);
   if (!info) $done();
-  if (args.reset_day !== "false") {
-    let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
-  }
+  let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
+  let reset_day = args.reset_day;
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
   let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (resetDayLeft) {
+  if (resetDayLeft && reset_day !== "false") {
     content.push(`重置：剩余${resetDayLeft}天`);
   }
-  if (expire && expire  !== "false") {
+  if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`到期：${formatTime(expire)}`);
   }
