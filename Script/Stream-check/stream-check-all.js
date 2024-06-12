@@ -23,7 +23,7 @@ const ICONS = [
 
 ;(async () => {
     let panel_result = {
-        title: '流媒体解锁检测',
+        title: 'GPT|流媒体解锁检测',
         content: '',
         icon: 'play.tv.fill',
         'icon-color': '#FF2D55',
