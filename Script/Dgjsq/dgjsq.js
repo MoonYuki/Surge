@@ -1,13 +1,13 @@
 const jsondata = JSON.parse(typeof $response != "undefined" && $response.body || null);
-console.log("start");
+console.log('start');
 
 if (typeof $response == "undefined") {
-  console.log("response undefined");
+  console.log('response undefined');
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
   jsondata.headers = $request.headers;
 } else if (jsondata && jsondata.subscriber) {
-  console.log("rewrite start");
+  console.log('rewrite start');
   jsondata.subscriber.subscriptions = jsondata.subscriber.subscriptions || {};
   jsondata.subscriber.entitlements = jsondata.subscriber.entitlements || {};
   jsondata.subscriber.non_subscriptions = {
@@ -40,5 +40,5 @@ if (typeof $response == "undefined") {
   jsondata.body = JSON.stringify(jsondata);
 }
 
-console.log("script end");
+console.log('script end');
 $done(jsondata);
