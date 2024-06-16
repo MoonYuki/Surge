@@ -2,3 +2,31 @@ DOMAIN-SUFFIX,afirstsoft.cn // ianygo
 DOMAIN-SUFFIX,tenorshare.com // ianygo
 DOMAIN-SUFFIX,autonavi.com // ianygo
 # ＞ Log脚本筛选漏网之鱼
+DOMAIN,6jl2ou-cdn-settings.appsflyersdk.com
+DOMAIN,6jl2ou-launches.appsflyersdk.com
+DOMAIN,65d45e66d5144021afecfe1d.config.smooch.io
+DOMAIN,649b0e5c4c3a04b6ef0c98e3.webloader.smooch.io
+DOMAIN,api.chairbook82.com
+DOMAIN,api.iterable.com
+DOMAIN,api.revenuecat.com
+DOMAIN,api.sir90hl.com
+DOMAIN,api.uymgg1.com
+DOMAIN,app.adjust.net.in
+DOMAIN,cdn.smooch.io
+DOMAIN,cdn.ss-cdn.com
+DOMAIN,images.squarespace-cdn.com
+DOMAIN,my.shark-china.com
+DOMAIN,qz1gy.app
+DOMAIN,s.swiftypecdn.com
+DOMAIN,sessions.bugsnag.com
+DOMAIN,shark-china.com
+DOMAIN,support.shark-china.com
+DOMAIN,surfsharkstatus.com
+DOMAIN,toolboxpro.app
+DOMAIN,whatshub.top
+DOMAIN,www.surge-activation.com
+DOMAIN,www.toolboxpro.app
+DOMAIN,www.vyh9v.app
+DOMAIN,xxxx92xxxx.com
+
+DOMAIN-SUFFIX,myqnapcloud.io
