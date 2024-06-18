@@ -6,6 +6,8 @@ DOMAIN,6jl2ou-cdn-settings.appsflyersdk.com
 DOMAIN,6jl2ou-launches.appsflyersdk.com
 DOMAIN,65d45e66d5144021afecfe1d.config.smooch.io
 DOMAIN,649b0e5c4c3a04b6ef0c98e3.webloader.smooch.io
+DOMAIN,ac-turnip.com
+DOMAIN,alerts.home-assistant.io
 DOMAIN,analytics.plex.tv
 DOMAIN,api.chairbook82.com
 DOMAIN,api.iterable.com
@@ -17,6 +19,8 @@ DOMAIN,app.adjust.world
 DOMAIN,app.termly.io
 DOMAIN,app.whatshub.top
 DOMAIN,auxin.g123.jp
+DOMAIN,brands.home-assistant.io
+DOMAIN,caihongyun.org
 DOMAIN,cdn.g123-queensblade.com
 DOMAIN,cdn.smooch.io
 DOMAIN,cdn.ss-cdn.com
@@ -33,6 +37,7 @@ DOMAIN,freedomain.one
 DOMAIN,g123.jp
 DOMAIN,game2.g123-queensblade.com
 DOMAIN,gc3a.g123.jp
+DOMAIN,greatcourses.thld.co
 DOMAIN,guruguru.pro.g123-cpp.com
 DOMAIN,h5.g123.jp
 DOMAIN,images.squarespace-cdn.com
@@ -43,6 +48,7 @@ DOMAIN,metadata.provider.plex.tv
 DOMAIN,momentary.link
 DOMAIN,my.shark-china.com
 DOMAIN,option.ymq.cool
+DOMAIN,payments.spri.ng
 DOMAIN,platform-ik.g123.jp
 DOMAIN,platform-sc.g123.jp
 DOMAIN,psp.g123.jp
@@ -54,9 +60,12 @@ DOMAIN,s.swiftypecdn.com
 DOMAIN,sessions.bugsnag.com
 DOMAIN,shark-china.com
 DOMAIN,songshuhui.net
+DOMAIN,sonoff.tech
 DOMAIN,sonos.plex.tv
 DOMAIN,support.shark-china.com
 DOMAIN,surfsharkstatus.com
+DOMAIN,teespring.com
+DOMAIN,the-engineering-mindset.creator-spring.com
 DOMAIN,theengineeringmindset.com
 DOMAIN,together.plex.tv
 DOMAIN,toolboxpro.app
@@ -64,12 +73,14 @@ DOMAIN,v1.kuroapi.com
 DOMAIN,vod.provider.plex.tv
 DOMAIN,whatshub.top
 DOMAIN,www.bv2.online
+DOMAIN,www.chaipip.com
 DOMAIN,www.dictionarystore.com
 DOMAIN,www.kuromis.com
 DOMAIN,www.onitsukatiger.com.tw
 DOMAIN,www.surge-activation.com
 DOMAIN,www.toolboxpro.app
 DOMAIN,www.vyh9v.app
+DOMAIN,wz3.caihongyun.one
 DOMAIN,xxxx92xxxx.com
 
 DOMAIN-SUFFIX,myqnapcloud.io
