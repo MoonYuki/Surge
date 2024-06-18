@@ -2,12 +2,7 @@ DOMAIN-SUFFIX,afirstsoft.cn // ianygo
 DOMAIN-SUFFIX,tenorshare.com // ianygo
 DOMAIN-SUFFIX,autonavi.com // ianygo
 # ＞ Log脚本筛选漏网之鱼
-DOMAIN,6jl2ou-cdn-settings.appsflyersdk.com
-DOMAIN,6jl2ou-launches.appsflyersdk.com
-DOMAIN,65d45e66d5144021afecfe1d.config.smooch.io
-DOMAIN,649b0e5c4c3a04b6ef0c98e3.webloader.smooch.io
 DOMAIN,ac-turnip.com
-DOMAIN,alerts.home-assistant.io
 DOMAIN,analytics.plex.tv
 DOMAIN,api.chairbook82.com
 DOMAIN,api.iterable.com
@@ -19,10 +14,8 @@ DOMAIN,app.adjust.world
 DOMAIN,app.termly.io
 DOMAIN,app.whatshub.top
 DOMAIN,auxin.g123.jp
-DOMAIN,brands.home-assistant.io
 DOMAIN,caihongyun.org
 DOMAIN,cdn.g123-queensblade.com
-DOMAIN,cdn.smooch.io
 DOMAIN,cdn.ss-cdn.com
 DOMAIN,cdn.stamped.io
 DOMAIN,cdn1.stamped.io
@@ -83,4 +76,7 @@ DOMAIN,www.vyh9v.app
 DOMAIN,wz3.caihongyun.one
 DOMAIN,xxxx92xxxx.com
 
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,home-assistant.io
 DOMAIN-SUFFIX,myqnapcloud.io
+DOMAIN-SUFFIX,smooch.io
