@@ -13,7 +13,7 @@ private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = uMD8IFggqtF0ZbviJJFMQFhR3R52mVqhoJmKPt+aACs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.154.18:51820)
+peer = (public-key = uMD8IFggqtF0ZbviJJFMQFhR3R52mVqhoJmKPt+aACs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.154.20:51820)
 
 [WireGuard Surfshark-丹麦]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
