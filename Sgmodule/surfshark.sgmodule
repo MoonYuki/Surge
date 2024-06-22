@@ -1,13 +1,6 @@
 #!name=Surfshark节点
 #!desc=wireguard节点通道
 
-[WireGuard Surfshark-不丹]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = R/lGzro0Z8nbQWDVRJbfscimcUvbSrc/raIvXwfDoV4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.157.36:51820)
-
 [WireGuard Surfshark-澳门]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
@@ -15,782 +8,166 @@ dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
 peer = (public-key = uMD8IFggqtF0ZbviJJFMQFhR3R52mVqhoJmKPt+aACs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.154.20:51820)
 
-[WireGuard Surfshark-丹麦]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = peDjRPEdHHmo0hGootZ9f+MQCEXmziFkLhMTl2PeXRM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.92.53:51820)
-
-[WireGuard Surfshark-乌克兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = wy+PhWBP715KfBrsQR4P3JUalYc9a77FmZWQinwYLmo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 143.244.46.231:51820)
-
-[WireGuard Surfshark-乌兹别克斯坦]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = CX6N+j5AfK2LVl3tfAop6/oXFb15tCnuDbPy7CbrKXw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 94.154.124.85:51820)
-
-[WireGuard Surfshark-乌拉圭]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = N4HQsZ7deamq3itB5Pmj9MhtjjDNYKY4YfiUFkfWlBo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.119.32.36:51820)
-
-[WireGuard Surfshark-亚美尼亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = B+aSYrw7JSq7b60uK0nrMQGCiJ48QwiUp/aoRpYX2lU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 92.62.120.133:51820)
-
-[WireGuard Surfshark-以色列]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = ZEG2fUrtohnVePblUlDM6wyyeTobzsABnMjTTFmqNUE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 169.150.227.147:51820)
-
-[WireGuard Surfshark-伯利兹]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = zcxA9gW+ism40rUoF5B4UPV655FLymJ1n4t0WogtZkU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.119.33.20:51820)
-
-[WireGuard Surfshark-保加利亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = LQFiCiZcPEoYasKRLbCfXp2fYYsj8wiMr/L9u6hYqSo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 156.146.55.196:51820)
-
-[WireGuard Surfshark-克罗地亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = nIQmC5T4H0HX4yA2u/Z5rrbLQDAOLA+kFCdt8S94xXg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.102.247.139:51820)
-
-[WireGuard Surfshark-冰岛]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = d0m2sIa0JGcxCBvoWDU77SjmPoiWI/oKoX1TL2f2fTA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.139.252.4:51820)
-
-[WireGuard Surfshark-列支敦士登]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = ZSCz5PqrLnu+Eu9wjiMDLscEHTBcfD0H3CGz0i8pXxc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.150.67:51820)
-
 [WireGuard Surfshark-加拿大・温哥华]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = o4HezxSsbNqJFJZj+VBw/QXFLpfNo7PZu8xe7H2hTw0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.22.81.175:51820)
-
-[WireGuard Surfshark-加拿大・蒙特利尔]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = pB//7qgQ/TQyIMQWKO9GvUfJNYCfVZYwjF2nXPGIEX8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.112.69:51820)
+peer = (public-key = o4HezxSsbNqJFJZj+VBw/QXFLpfNo7PZu8xe7H2hTw0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.22.81.135:51820)
 
 [WireGuard Surfshark-加拿大・多伦多]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = W9bzkcL3fiV64vDpB4pbrz8QafNn3y5P9Yc/kQvy4TA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 37.19.211.117:51820)
+peer = (public-key = W9bzkcL3fiV64vDpB4pbrz8QafNn3y5P9Yc/kQvy4TA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.57.36:51820)
 
-[WireGuard Surfshark-加纳]
+[WireGuard Surfshark-加拿大・蒙特利尔]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = UH3qS1ysggFDEBP8Hzgz19Sw0T+SKxFldkatHRKMqBY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 196.44.118.83:51820)
-
-[WireGuard Surfshark-匈牙利]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Pk3+iZNP0uWkDTSmEHlUeSA3WyiFXLXgYgAQ5wNyIBk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.120.35:51820)
-
-[WireGuard Surfshark-北马其顿]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = dZNq48noPkey9rwSbAU+masbafpDSaAmtAMaP+gzLxA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.225.28.83:51820)
-
-[WireGuard Surfshark-南非]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Wj/fSWxNLs1igL1uTRp4zLFNohe4S1wqNTYRHevthUA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 154.47.30.105:51820)
-
-[WireGuard Surfshark-卢森堡]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 68JVBL/M2AYQ9gYHtcpmZ6Pl+ayhJjTL2sr6Ej1VEFg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.153.151.141:51820)
-
-[WireGuard Surfshark-印度・Delhi]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = +dmGrWPM9NI3vQkZ9E7hMRKAJKYzd3YMXGq10sjbN0A=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 92.62.121.117:51820)
-
-[WireGuard Surfshark-印度・孟买]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = nZBv1nNW6HSvjybgCO9TNHI1pkX+C6GjyAHUtkJRjRI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 176.227.240.40:51820)
-
-[WireGuard Surfshark-印度尼西亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = qyghLDfpfyparp0M52OVcmhKckayOvbRO2DDLkgJqyk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 93.185.162.21:51820)
-
-[WireGuard Surfshark-厄瓜多尔]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = LErFIOc3YBK1khnmwV+a6fBbYff2OS3h+wnIuOKZQTY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 92.62.122.34:51820)
+peer = (public-key = pB//7qgQ/TQyIMQWKO9GvUfJNYCfVZYwjF2nXPGIEX8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.112.107:51820)
 
 [WireGuard Surfshark-台湾]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = P0vaGUOUE7V5bbGOYY2WgQeZnTZEHvIr+dfebU7W4Ao=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.144.227.53:51820)
-
-[WireGuard Surfshark-哈萨克斯坦]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = c8SPrUWVMjSm3xdZRF4eg57sdEo2TFmBDVKP+A+quHM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.130.139.40:51820)
-
-[WireGuard Surfshark-哥伦比亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = lLqqxZuCTtIpBjgZJYWzPQn/7st24iVpJN+/xS7jogs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.88.111.73:51820)
-
-[WireGuard Surfshark-土耳其]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = sF/TlxU9XaDN3QQBT/lu2Pw9qpD3XpDqLBfInBtff2A=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.136.155.50:51820)
-
-[WireGuard Surfshark-埃及]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = EKaIyCUV8aqCtRkV6jfkU1IicE5ZaU2RC4VKAdgjOyA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.147.69:51820)
-
-[WireGuard Surfshark-塞尔维亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = A3vmr6/umw5sP8anxNyipgi5oEnOnZdqB1K/cbQpMiI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.111.107:51820)
-
-[WireGuard Surfshark-塞浦路斯]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = kEAQgNChxGgrzoKPpCPFJKh0L1/5rXIq08KSY4g26zY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 193.19.204.76:51820)
-
-[WireGuard Surfshark-墨西哥]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 6C8O3L/Li0JOO5aWvL6PrciiZOOaRBtWmempOUENLQs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.88.22.76:51820)
-
-[WireGuard Surfshark-奥地利]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = dPZe8Jq3Hu0k07MDk+Y4+AS2XHSLYalyg91TSFXRYEA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 87.249.133.81:51820)
-
-[WireGuard Surfshark-委内瑞拉]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = fK7yvbWdPrpginzYzhQu7IT6J+Mf18/K+VNrwyXqriU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.149.3.18:51820)
-
-[WireGuard Surfshark-孟加拉国]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 6tOduT4iNbZyqKNzsSgDe/ckziO6101NPZwrnY5WpTk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.153.36:51820)
-
-[WireGuard Surfshark-安道尔]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = alv2SqjLM8Aw5yz/7pGZydfALPfYzgwDquAe5dWX12s=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.152.85:51820)
-
-[WireGuard Surfshark-尼日利亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = mMmsmMyqtASb4V42H5nxyD8BgauWrNhCCZdBHCsbC00=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 213.109.151.18:51820)
-
-[WireGuard Surfshark-尼泊尔]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = UKMTmY99xrUwchQNucd1SW6CmIFsDH1JpxQStRWA1V4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 194.169.170.44:51820)
-
-[WireGuard Surfshark-巴哈马]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = uM3cUZiQ46nRLALqOQfBz2cqg+RyR/OIHH0Xvwf9wHY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.145.34:51820)
-
-[WireGuard Surfshark-巴基斯坦]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = DLb7wUFYkOcx5iiNxbNquP5rH+EJdiQfrdFaQoojskU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 113.203.221.19:51820)
-
-[WireGuard Surfshark-巴拉圭]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = vY6iX5ivkYIrIADMPQMtzR8onU7UYlB52XH5loAeDn0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 194.26.131.36:51820)
-
-[WireGuard Surfshark-巴拿马]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 9L1tbh/IHrrtImJnuEsVc1eN7xChlLzS6nCMaVyH/iQ=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.244.139.99:51820)
-
-[WireGuard Surfshark-巴西]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = IFTVXxhLEqVgZI/JGOPRtmrNUQW1DNljeBe8Ys7v90A=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.58.35:51820)
-
-[WireGuard Surfshark-希腊]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = bXnjQGLhuauvBMg51YIAhwX40YqNL2ImyEub5DpHaBk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.102.246.106:51820)
-
-[WireGuard Surfshark-德国・柏林]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = d3ldwEjnFcbLwD1o8uC5xC3DaSNek8DGeTpOb/h/IE4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 217.138.216.253:51820)
-
-[WireGuard Surfshark-德国・Frankfurt am Main]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = fJDA+OA6jzQxfRcoHfC27xz7m3C8/590fRjpntzSpGo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 156.146.33.79:51820)
-
-[WireGuard Surfshark-意大利・罗马]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = fqxSeDr7n249iywruwLMwkV3r36svPT1tLf9TJOTFAw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 37.120.207.181:51820)
-
-[WireGuard Surfshark-意大利・米兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = vIMHzH5FHdVkrhOOc0u/FySVhumaLC3XUk39Wk34LnE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.182.69:51820)
-
-[WireGuard Surfshark-拉脱维亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = EmghYf9rIpwOQ0uIjIxgCXs/WwHJthNvPIv5iKseE3A=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 80.246.31.100:51820)
-
-[WireGuard Surfshark-挪威]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = pXfZi2vsdd88qrnqh+bwqHG4IYD42pj3T1wCm3PIGmw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.103.237:51820)
-
-[WireGuard Surfshark-捷克共和国]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = c1bfP+OBTj6WUe8NDH8d6nDTwpQicopfdkHFx3BIaSk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.152.64.165:51820)
-
-[WireGuard Surfshark-摩尔多瓦]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 4Exn42t337sxoBzYHxgmDBNq+AhTYz6nvEj98TWY50Y=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.181.229.227:51820)
-
-[WireGuard Surfshark-摩洛哥]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Tl7KINtNnar9fVQD8LG2dswOEqSKmUP9ioimCjo6jHc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 194.169.169.34:51820)
-
-[WireGuard Surfshark-摩纳哥]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = rj9PNit3SCy52Knw0QmHUfN2W59nB4oMOtmOZq1q/Hc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.151.36:51820)
-
-[WireGuard Surfshark-文莱]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = QE7hpHqVYWqohTmOnmYtKjUv4b6Bb8S2b9AF0EFl638=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.158.18:51820)
-
-[WireGuard Surfshark-斯洛伐克]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = T5b7+uwUFqN5r1WsfBXURpSnYCYRLFAVreKkIQHGOlw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.114.13:51820)
-
-[WireGuard Surfshark-斯洛文尼亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = yPdmxOfzm06fotkt/dlaAiyxWPaWfCuDPaUljNx+c38=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 195.158.249.23:51820)
-
-[WireGuard Surfshark-斯里兰卡]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = +8TxSpyyEGiZK6d/5V+94Zc7nxOV3F1ag7sM6AN86GY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.156.18:51820)
+peer = (public-key = P0vaGUOUE7V5bbGOYY2WgQeZnTZEHvIr+dfebU7W4Ao=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.144.227.56:51820)
 
 [WireGuard Surfshark-新加坡]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = MGfgkhJsMVMTO33h1wr76+z6gQr/93VcGdClfbaPsnU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.192.173:51820)
+peer = (public-key = MGfgkhJsMVMTO33h1wr76+z6gQr/93VcGdClfbaPsnU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 156.146.56.132:51820)
 
 [WireGuard Surfshark-新西兰]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = xv8P19y0m9ojrLelCaPzGtaVv7tlPzLgZxvAD7lpYDg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 180.149.231.115:51820)
+peer = (public-key = xv8P19y0m9ojrLelCaPzGtaVv7tlPzLgZxvAD7lpYDg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 180.149.231.11:51820)
 
 [WireGuard Surfshark-日本]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = YJSjrc/WWOjQUyUi4iYcHb7LsWWoCY+2fK8/8VtC/BY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 154.47.23.120:51820)
-
-[WireGuard Surfshark-智利]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = FdTRnh0g+FYFPj5UURQIcDbygd+2gMRrslErfmZxdDo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.88.104.34:51820)
+peer = (public-key = YJSjrc/WWOjQUyUi4iYcHb7LsWWoCY+2fK8/8VtC/BY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.22.143:51820)
 
 [WireGuard Surfshark-柬埔寨]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = z2Ik8BG6XgosyYE/O4Vz4kiPTZyoWSlJvZtFeFlNclI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.146.36:51820)
-
-[WireGuard Surfshark-格陵兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = zPg3ZJ7OsztQ0CRSSvH5o2KVL1DYgDGW65DFwLsYwyw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 92.62.123.85:51820)
-
-[WireGuard Surfshark-格鲁吉亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = L79E4IoaVZBXOyoMM82TvUIbiKlloRbUnT8R2Cl3PVM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 83.97.115.34:51820)
-
-[WireGuard Surfshark-比利时・安特卫普]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = cTDaqf4qOaNGUbzt/qMRUCcOzL9wknQtG00po/bBt3Y=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.109.244.110:51820)
-
-[WireGuard Surfshark-比利时・布鲁塞尔]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 9wZOjtwuKEc0GBcvc3xJQ4Kjo8G3EMXu6zJRzbanOjc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.55.235:51820)
-
-[WireGuard Surfshark-沙特阿拉伯]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = quiGeZeYE8T2FBBfz3mGikY9m7cTTyA0q/ROFakbfwU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.150.5.4:51820)
-
-[WireGuard Surfshark-法国・巴黎]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = AsvLuvKKADdc67aA/vHA3vb61S6YnGGx2Pd4aP4wal8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 85.204.70.113:51820)
-
-[WireGuard Surfshark-法国・马赛]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = QYa3ZFLwWAHKiJzOcbM73K7KBE0tdJYuirbGb+uH0H0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.16.152:51820)
-
-[WireGuard Surfshark-法国・波尔多]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = ArE5eVIEOPellzFlGK/oOcHCGnB+AAv0Un4C100COmw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.134.79.133:51820)
-
-[WireGuard Surfshark-波兰・华沙]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = vBa3HK7QXietG64rHRLm085VMS2cAX2paeAaphB/SEU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.128.38.131:51820)
-
-[WireGuard Surfshark-波兰・格但斯克]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 4lZhg/fKDCRLjvULGntx21qfebzQv5TJjZ1pc82sUgc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 5.187.52.203:51820)
-
-[WireGuard Surfshark-波多黎各]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = aShaCPgmFn4fHK6wY7pVEIirZ3J961+93d3Qicz6swE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.139.253.20:51820)
-
-[WireGuard Surfshark-波斯尼亚和黑塞哥维那]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = hsm/ps/uxcsVNzT3OmV/l7ZWv+TRIS+IM+N6/nTymkw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 172.252.89.18:51820)
+peer = (public-key = z2Ik8BG6XgosyYE/O4Vz4kiPTZyoWSlJvZtFeFlNclI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.146.20:51820)
 
 [WireGuard Surfshark-泰国]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = OoFY46j/w4uQFyFu/OQ/h3x+ymJ1DJ4UR1fwGNxOxk0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.176.152.27:51820)
+peer = (public-key = OoFY46j/w4uQFyFu/OQ/h3x+ymJ1DJ4UR1fwGNxOxk0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.176.152.19:51820)
 
 [WireGuard Surfshark-澳大利亚・珀斯]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = oD0TqnE/ETIpvMO8DZObjdLVRf3jhzG7qV5GtM8/Yik=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 124.150.139.43:51820)
+peer = (public-key = oD0TqnE/ETIpvMO8DZObjdLVRf3jhzG7qV5GtM8/Yik=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.248.78.45:51820)
 
 [WireGuard Surfshark-澳大利亚・阿德莱德]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = J7N3UrHc71+LJkn8gsI9Ja8YcpTXT8fV789LLKnIXAY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.214.20.197:51820)
+peer = (public-key = J7N3UrHc71+LJkn8gsI9Ja8YcpTXT8fV789LLKnIXAY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.214.20.189:51820)
 
 [WireGuard Surfshark-澳大利亚・布里斯班]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = Jo+U6dj+eAf8zdtoMqyYPmrJNVQj82mipH0mEDyfUXo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 144.48.39.11:51820)
+peer = (public-key = Jo+U6dj+eAf8zdtoMqyYPmrJNVQj82mipH0mEDyfUXo=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 144.48.39.125:51820)
 
 [WireGuard Surfshark-澳大利亚・悉尼]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = Y5KM9kHdM0upMsIJWUQquOY1RgkWX69AHw/Dl5KyIk4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.248.76.213:51820)
+peer = (public-key = Y5KM9kHdM0upMsIJWUQquOY1RgkWX69AHw/Dl5KyIk4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 180.149.228.173:51820)
 
 [WireGuard Surfshark-澳大利亚・墨尔本]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = yYX9yLjHOSWVAsaujcIVWAxF9wYMmHupG1RtJk+u21o=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.192.80.131:51820)
-
-[WireGuard Surfshark-爱尔兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = TjYxodFNdGlefxnWqe9vWWJHnz3meYWWhiIJyU8rgg8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.34.242.54:51820)
-
-[WireGuard Surfshark-爱沙尼亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = CsdrT+WfcMRPhrOWgZeHj9DQiQtJfYFci94K5ztjr2E=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.174.159.105:51820)
-
-[WireGuard Surfshark-玻利维亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = YTVk+CUVWELH18qftzEURb8JJfLHfmIMewcx0p8hkT0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 194.169.171.18:51820)
-
-[WireGuard Surfshark-瑞典]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = oUFRc+2emXgogDVWnJF4RAzr72PyafCzMVeQOgG92lY=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.76.9.39:51820)
-
-[WireGuard Surfshark-瑞士]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = qFuwaE8IyDbNBTNar3xAXRGaBdkTtmLh1uIGMJxTxUs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 169.150.197.4:51820)
-
-[WireGuard Surfshark-秘鲁]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = mR3GelqqkAL6IKKbzcdxJm3f3uyVNxdzCCtTcLT+wUc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 193.218.35.101:51820)
-
-[WireGuard Surfshark-立陶宛]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = pC7xJD56uFFJ7qHpe3XvXXhjwZcoMco09ySHOg4h+iA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.149.117:51820)
+peer = (public-key = yYX9yLjHOSWVAsaujcIVWAxF9wYMmHupG1RtJk+u21o=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.192.80.219:51820)
 
 [WireGuard Surfshark-缅甸]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = tehGZzcmdK59x99I9dbfuWOHSxBdPsz5lB+uAoT75kE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.95.242.36:51820)
-
-[WireGuard Surfshark-罗马尼亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = uRT3uSAUwvm7Rp+s3n5V9JibsKHKAZ/8+SU3psG8QxI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 89.33.8.195:51820)
+peer = (public-key = tehGZzcmdK59x99I9dbfuWOHSxBdPsz5lB+uAoT75kE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.95.242.18:51820)
 
 [WireGuard Surfshark-美国・西雅图]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = SpMH/p90bg9ZAG6V2DWJQ9csWPVnKcDVppIp9Xul5G8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.102.254.32:51820)
+peer = (public-key = SpMH/p90bg9ZAG6V2DWJQ9csWPVnKcDVppIp9Xul5G8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.102.46.51:51820)
 
 [WireGuard Surfshark-美国・本德]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = YaxEFQHtwF/EGvf5s/aLlX5Jr0djKTV5oNcAcIwAz0E=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 66.235.168.191:51820)
+peer = (public-key = YaxEFQHtwF/EGvf5s/aLlX5Jr0djKTV5oNcAcIwAz0E=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 66.235.168.212:51820)
 
 [WireGuard Surfshark-美国・旧金山]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = 7SpGSSI78hf8jy689ec5Ql0/Gsq0LLHDmjEFsGUWl1k=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 93.152.210.211:51820)
-
-[WireGuard Surfshark-美国・San Jose]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = sDDS1f/+IqVljMN7GzMFeAbNescQUTLIt0xio0W61Q0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 156.146.54.194:51820)
+peer = (public-key = 7SpGSSI78hf8jy689ec5Ql0/Gsq0LLHDmjEFsGUWl1k=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 93.152.210.166:51820)
 
 [WireGuard Surfshark-美国・盐湖城]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = jxotWPy1jNzKzjqSqg6KkWnoOsp/FbrTK4+j9gluSFA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 93.152.220.167:51820)
+peer = (public-key = jxotWPy1jNzKzjqSqg6KkWnoOsp/FbrTK4+j9gluSFA=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 93.152.220.245:51820)
 
 [WireGuard Surfshark-美国・洛杉矶]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = m+L7BVQWDwU2TxjfspMRLkRctvmo7fOkd+eVk6KC5lM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 169.150.203.248:51820)
+peer = (public-key = m+L7BVQWDwU2TxjfspMRLkRctvmo7fOkd+eVk6KC5lM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 169.150.203.244:51820)
 
 [WireGuard Surfshark-美国・拉斯维加斯]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = Nw5CG5BOvqb8GXVEKLOo7v3gGvP7WaUYlJT++c3c31g=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.89.173.179:51820)
+peer = (public-key = Nw5CG5BOvqb8GXVEKLOo7v3gGvP7WaUYlJT++c3c31g=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 79.110.53.27:51820)
 
 [WireGuard Surfshark-美国・丹佛]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = AnRLZKBwCfuGFZfoa3dsdjpcpvgFsQhASmjHXhIJLgM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.102.44.71:51820)
+peer = (public-key = AnRLZKBwCfuGFZfoa3dsdjpcpvgFsQhASmjHXhIJLgM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.102.44.111:51820)
 
 [WireGuard Surfshark-美国・菲尼克斯]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = HDCyeD2+lw6KHVMu7Opkt4V4ikYZHzQNWmwklBMb4Ac=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.86.208.122:51820)
-
-[WireGuard Surfshark-美国・堪萨斯城]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = SWN/jzfK69ucEUqQyPejKb9wWxwUoOgG37YlgeCmvjg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 74.80.182.77:51820)
-
-[WireGuard Surfshark-美国・底特律]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = WFhlLK8H1pRzgMggza5NhBMjIcGhmsCqjR8+yFRfXhg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.141.119.78:51820)
-
-[WireGuard Surfshark-美国・芝加哥]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = DpMfulanF/MVHmt3AX4dqLqcyE0dpPqYBjDlWMaUI00=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.42.143:51820)
-
-[WireGuard Surfshark-美国・布法罗]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 156ry2sOmv+I9KYTy2jR4/BLTnPT+Qn+DoCNqOon1ys=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 172.93.153.69:51820)
-
-[WireGuard Surfshark-美国・莱瑟姆]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Smruh1SmMqi7CecjV/+yI4Sy62gpAr+Uddq+9K6iLB0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 154.16.169.88:51820)
-
-[WireGuard Surfshark-美国・波士顿]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = V0vpMcp0/586Y/q1EzW9PhM45JhypnCYgmrP0rzDEVw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 43.225.189.120:51820)
-
-[WireGuard Surfshark-美国・纽约]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = rhuoCmHdyYrh0zW3J0YXZK4aN3It7DD26TXlACuWnwU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 138.199.40.164:51820)
-
-[WireGuard Surfshark-美国・达拉斯]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 0iwHQpV+rsOg38ogv4g4XMLJa51YqWY/yKWR9UEUMDk=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 169.150.254.92:51820)
-
-[WireGuard Surfshark-美国・阿什伯恩]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 9ef2f8mXHnAxx06lx4OxhtzASfJgv6YfEimuVyef6QE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.144.115.136:51820)
-
-[WireGuard Surfshark-美国・休斯顿]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 1g84fGxVJokKXdMYEJKjN6/opyYN/YSHmrMyw0v6VnM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 149.40.58.2:51820)
-
-[WireGuard Surfshark-美国・夏洛特]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = tLnNDtNUOScxIU6t70ujsx1erSWOj9hWkWJD5iJwPwc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 165.140.84.35:51820)
-
-[WireGuard Surfshark-美国・亚特兰大]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = SgciXll6wGQhcyxPUdp0V0z6WwN9P3fqDoeh3N3xNjc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 195.181.171.226:51820)
-
-[WireGuard Surfshark-美国・迈阿密]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = KvJ/jtWb8BsBI85OcZnOIJu9kfh12mCMR4cejWFpDCc=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.45.187:51820)
+peer = (public-key = HDCyeD2+lw6KHVMu7Opkt4V4ikYZHzQNWmwklBMb4Ac=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.86.211.64:51820)
 
 [WireGuard Surfshark-老挝]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
@@ -799,177 +176,37 @@ dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
 peer = (public-key = yIlpSftvkSE2+T0uqxWl9HeQSrmPg+HkyvGLi55UqG0=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 194.169.168.20:51820)
 
-[WireGuard Surfshark-芬兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = +nv/Z8I2VS0eRdZwkpQW3U9RmsboTz2MUF94jVg5w10=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 193.56.113.28:51820)
-
-[WireGuard Surfshark-英国・Edinburgh]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = f0fMBZNOzoTDfU28EKhtvYy3keiG5Jkh4fLBov1DI0U=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 188.240.57.125:51820)
-
 [WireGuard Surfshark-英国・格拉斯哥]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = QiFHJ7wtwhXEztRqBjGrFphsFXtlAFWwMDgruFKq0XE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.108.105.37:51820)
+peer = (public-key = QiFHJ7wtwhXEztRqBjGrFphsFXtlAFWwMDgruFKq0XE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.108.105.152:51820)
 
 [WireGuard Surfshark-英国・曼彻斯特]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = 9R8He1cP8Laf5MT58FcaEYtPW/qnN3M9MQThIXOIvHs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.214.44.51:51820)
+peer = (public-key = 9R8He1cP8Laf5MT58FcaEYtPW/qnN3M9MQThIXOIvHs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 139.28.176.29:51820)
 
 [WireGuard Surfshark-英国・伦敦]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = iBJRXLZwXuWWrOZE1ZrAXEKMgV/z0WjG0Tks5rnWLBI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 188.240.71.251:51820)
-
-[WireGuard Surfshark-荷兰]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Lxg3jAOKcBA9tGBtB6vEWMFl5LUEB6AwOpuniYn1cig=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 143.244.42.91:51820)
-
-[WireGuard Surfshark-菲律宾]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = utXZy1ELBSQKa6s9/K/W4sV11Jod6sSLoikKqKRPyQs=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 23.230.151.68:51820)
-
-[WireGuard Surfshark-葡萄牙・波尔图]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = F24iHyEt6YSSaUry/nQAfIEOwXncH0RHUtkte0znvkE=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.192.205.60:51820)
-
-[WireGuard Surfshark-葡萄牙・里斯本]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = JgYlpt7jFh0FV2QO0QQ3yFfsnqikUq977V3cObFGTQ4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.92.210.68:51820)
+peer = (public-key = iBJRXLZwXuWWrOZE1ZrAXEKMgV/z0WjG0Tks5rnWLBI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 217.146.83.86:51820)
 
 [WireGuard Surfshark-蒙古]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = 3nLHy4uBd2nBUDuAuR6AM58yHLiX2CAXg8kdgEr6tV4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.155.34:51820)
-
-[WireGuard Surfshark-西班牙・巴塞罗那]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 3EC6079YDlzJKcNLdrm/t+JLG8hV3wPpoWE4MypjYnw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.188.61.23:51820)
-
-[WireGuard Surfshark-西班牙・巴伦西亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = TlYKGW07dqFfedNfAnVIPv2WPfC54h96se+dcIDuNhU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 193.19.207.88:51820)
-
-[WireGuard Surfshark-西班牙・马德里]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = a30vOQfjwPzjRxGNi2dvSAMdaPHEYatR84cUjXKOwls=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 212.102.48.20:51820)
-
-[WireGuard Surfshark-越南]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Mioou38fh5H+3LWMpitLOWT3JaDGg2gXxqjl2eXkPFU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 83.97.112.68:51820)
-
-[WireGuard Surfshark-阿塞拜疆]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = pvWYTFxIpqo25NGTertIIWnccS/sUQ6fIkqd8XJYzEI=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 45.39.203.36:51820)
-
-[WireGuard Surfshark-阿尔及利亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = KyFFiO8bY3wZGpxJf7aqEH3TrG+Jj4ZfNOyh2oS7ICU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.144.18:51820)
-
-[WireGuard Surfshark-阿尔巴尼亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = l8EOWPyzt/njrb74CADY4VOhns/TbUN6KFTbytHcFQw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 31.171.154.101:51820)
-
-[WireGuard Surfshark-阿拉伯联合酋长国]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = 6dZGkg0iAMgQuOCGknAgBAqDEeJeBQ4Of5eblO4aNC8=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.102.197:51820)
-
-[WireGuard Surfshark-阿根廷]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = JeHzAD4ZNXnFw4TdG37pi8bHPy6CQQqeRXK09pMHVyU=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 89.117.41.99:51820)
-
-[WireGuard Surfshark-韩国]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = bD/m2mdKxJXG2wTkLsmWpiW8xZwkDdrrrwC44auOhQg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 103.212.220.15:51820)
+peer = (public-key = 3nLHy4uBd2nBUDuAuR6AM58yHLiX2CAXg8kdgEr6tV4=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.155.20:51820)
 
 [WireGuard Surfshark-香港]
 private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
 self-ip = 10.14.0.2
 dns-server = 162.252.172.57, 149.154.159.92
 mtu = 1280
-peer = (public-key = JYHdktdtuM7inbtsxRKSDpnBVTWQ5+QLZ/cWWmf4VRg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 118.99.2.10:51820)
-
-[WireGuard Surfshark-马恩岛]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = PQKiTkyLs9+rvDkmhnHYBKUZAZwBpZYIZ7/mefvYKko=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.148.67:51820)
-
-[WireGuard Surfshark-马来西亚]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = AS84LXlJfgBwGHc70MvtGRxsMqNNucZ2pNOBayJUm04=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 185.196.0.13:51820)
-
-[WireGuard Surfshark-马耳他]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = c9EuAnWYvGUyFrzrV70Fph0onkFv2xe3Bc0gTCFuKRw=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 193.228.56.139:51820)
-
-[WireGuard Surfshark-黑山共和国]
-private-key = 2IZFVavWwamiQZ/JX9T4HV0Ylx5rTIsXPHklUP3nmXI=
-self-ip = 10.14.0.2
-dns-server = 162.252.172.57, 149.154.159.92
-mtu = 1280
-peer = (public-key = Jhiez1pdO7tqUX0OmUubd9SPfvUc/ypSLRzWiyr3SRM=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 62.197.159.18:51820)
+peer = (public-key = JYHdktdtuM7inbtsxRKSDpnBVTWQ5+QLZ/cWWmf4VRg=, allowed-ips = "0.0.0.0/0, ::0/0", endpoint = 146.70.9.211:51820)
