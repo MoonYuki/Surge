@@ -78,8 +78,6 @@ DOMAIN,download.2.687247097.hokglobalgcloud.iegcom.com
 DOMAIN,download.sgameglobal.com
 DOMAIN,downloads-global.3cx.com
 DOMAIN,edge.aditude.io
-DOMAIN,eu.hamreus.com
-DOMAIN,eu1.hamreus.com
 DOMAIN,event-ingestor.judy.pnap.aditude.cloud
 DOMAIN,events.honorofkings.com
 DOMAIN,faas.sgameglobal.com
@@ -106,7 +104,6 @@ DOMAIN,hok.singaporepaya.com
 DOMAIN,hok.tlog.iegcom.com
 DOMAIN,hotcultural.site
 DOMAIN,huacloud.dev
-DOMAIN,ic.nordcdn.com
 DOMAIN,il.beauty321.com
 DOMAIN,image.maimn.com
 DOMAIN,imagedelivery.net
@@ -169,17 +166,6 @@ DOMAIN,res.sgameglobal.com
 DOMAIN,rsms.me
 DOMAIN,rybdqe.yfvi0ra3.xyz
 DOMAIN,s.swiftypecdn.com
-DOMAIN,s1.img26.com
-DOMAIN,s1.nordcdn.com
-DOMAIN,s2.img26.com
-DOMAIN,s3.img26.com
-DOMAIN,s4.img26.com
-DOMAIN,s5.img26.com
-DOMAIN,s6.img26.com
-DOMAIN,s7.img26.com
-DOMAIN,s8.img26.com
-DOMAIN,s9.img26.com
-DOMAIN,sb.nordcdn.com
 DOMAIN,sdgfg78.92mg7.com
 DOMAIN,sdn.geekzu.org
 DOMAIN,sessions.bugsnag.com
@@ -258,8 +244,11 @@ DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,enpass.io
 DOMAIN-SUFFIX,g123.jp
 DOMAIN-SUFFIX,g123-queensblade.com
+DOMAIN-SUFFIX,hamreus.com
 DOMAIN-SUFFIX,home-assistant.io
+DOMAIN-SUFFIX,img26.com
 DOMAIN-SUFFIX,myqnapcloud.io
+DOMAIN-SUFFIX,nordcdn.com
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,shark-china.com
 DOMAIN-SUFFIX,smooch.io
