@@ -1,0 +1,9 @@
+#!name=起点听书
+#!desc=解锁会员免费听书板块
+
+[Script]
+qdvip.response.js=type=http-response,pattern=^https?:\/\/.+.qidian.com\/argus\/api\/v[0-9]\/(adv\/getadvlistbatch|user\/getaccountpage|subscription\/getvipprice|client\/getsplashscreen),requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/QDVIP.js
+qdvip.header.js=type=http-request,pattern=^https?:\/\/.+.qidian.com\/argus\/api\/v[0-9]\/(audio\/getTtsChapterAudio|bookcontent\/getvipcontent|audio\/getaudiochapter\?),requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/QDVIP.js
+
+[MITM]
+hostname = %APPEND% *.qidian.com,*.if.qidian.com
