@@ -1,5 +1,8 @@
+# > DOMAIN-SUFFIX域名后缀匹配
 DOMAIN-SUFFIX,jiangxue.fun // Nas服务器
 DOMAIN-SUFFIX,nicecloud.cyou // NiceCloud机场
 DOMAIN-SUFFIX,nicesk.xyz // NiceCloud机场订阅
 DOMAIN-SUFFIX,m-team.cc // 馒头PT站
 DOMAIN-SUFFIX,huatuocode.huatuo.qq.com // 王者荣耀
+# > DOMAIN-KEYWORD域名关键词匹配
+DOMAIN-KEYWORD,speedtest
