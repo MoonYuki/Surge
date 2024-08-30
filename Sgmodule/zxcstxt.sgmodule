@@ -1,0 +1,12 @@
+#!name=知轩藏书签到
+#!desc=知轩藏书网页自动签到脚本
+
+[Script]
+# 创建知轩藏书签到脚本
+知轩藏书签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js
+
+# 获取知轩藏书会话
+获取知轩藏书会话=type=http-request,pattern=^https:\/\/zxcstxt\.com\/user\/,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js
+
+[MITM]
+hostname = %APPEND% zxcstxt.com
