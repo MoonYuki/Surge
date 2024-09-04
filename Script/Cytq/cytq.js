@@ -21,6 +21,14 @@ if (!$response){
       jsondata.svip.expires_time = arg.EXPIRES_TIME;
       jsondata.svip.is_auto_renewal = true;
     }
+  }else if (url.includes("/v1/user_detail")) {
+    // 我的页面（7.20.0）
+    if (jsondata.vip_info) {
+      jsondata.vip_info.vip.expires_time = arg.EXPIRES_TIME;
+      jsondata.vip_info.vip.is_auto_renewal = true;
+      jsondata.vip_info.svip.expires_time = arg.EXPIRES_TIME;
+      jsondata.vip_info.svip.is_auto_renewal = true;
+    }
   } else if (url.includes("/v2/user")) {
     // 我的页面
     if (jsondata.result) {
