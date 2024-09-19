@@ -28,6 +28,7 @@ DOMAIN,apku.bzqqczrm.xyz
 DOMAIN,app.termly.io
 DOMAIN,app13-us-tx.bb.zeptodev.com
 DOMAIN,app14-us-tx.bb.zeptodev.com
+DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,appleku.net
 DOMAIN,applep12.com
 DOMAIN,asia-m.live
@@ -56,12 +57,14 @@ DOMAIN,cdn.sur.ly
 DOMAIN,cdn2.inner-active.mobi
 DOMAIN,cdn2.jiuse2.cloud
 DOMAIN,cdnimg.clkxqqih.com
+DOMAIN,celestrak.org
 DOMAIN,cf.mhgui.com
 DOMAIN,check-p12.applep12.com
 DOMAIN,chuhai18.com
 DOMAIN,clash2024.com
 DOMAIN,clashandroid.org
 DOMAIN,clashv2ray.com
+DOMAIN,clashxiazai.com
 DOMAIN,code.tidio.co
 DOMAIN,comm.res.easebar.com
 DOMAIN,config.ads.vungle.com
@@ -169,6 +172,7 @@ DOMAIN,rvw.snva.jp
 DOMAIN,rybdqe.yfvi0ra3.xyz
 DOMAIN,s.swiftypecdn.com
 DOMAIN,s.zeptolab.com
+DOMAIN,scigame.ntcu.edu.tw
 DOMAIN,sdgfg78.92mg7.com
 DOMAIN,sdk-events.inner-active.mobi
 DOMAIN,sdn.geekzu.org
@@ -271,6 +275,7 @@ DOMAIN-SUFFIX,colamanga.com
 DOMAIN-SUFFIX,config-security.com
 DOMAIN-SUFFIX,enpass.io
 DOMAIN-SUFFIX,ero-labs.xyz
+DOMAIN-SUFFIX,fifthstarlabs.io
 DOMAIN-SUFFIX,freenom.com
 DOMAIN-SUFFIX,g123.jp
 DOMAIN-SUFFIX,g123-queensblade.com
@@ -285,6 +290,7 @@ DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,ko-fi.com
 DOMAIN-SUFFIX,nordcdn.com
 DOMAIN-SUFFIX,onlyfans.com
+DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,pusher.com
 DOMAIN-SUFFIX,quantumult.app
 DOMAIN-SUFFIX,shark-china.com
@@ -303,6 +309,7 @@ DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,yotpo.com
 DOMAIN-SUFFIX,youtonghy.com
 DOMAIN-SUFFIX,yyyue.xyz
+DOMAIN-SUFFIX,zxcs.info
 # > DOMAIN-KEYWORD域名关键词匹配
 DOMAIN-KEYWORD,69shu
 DOMAIN-KEYWORD,aditude
