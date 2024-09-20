@@ -13,6 +13,7 @@ DOMAIN,adsroute.security-reactor.com
 DOMAIN,advividnetwork.com
 DOMAIN,afdian.com
 DOMAIN,airdroid.com
+DOMAIN,alerts.home-assistant.io
 DOMAIN,analytics.fanbox.click
 DOMAIN,analytics.plex.tv
 DOMAIN,api.bdustatic.com
@@ -24,6 +25,7 @@ DOMAIN,api.phonebook82.com
 DOMAIN,api.preproduct.io
 DOMAIN,api.revenuecat.com
 DOMAIN,api.sir90hl.com
+DOMAIN,api.sprig.com
 DOMAIN,api.tablebook82.com
 DOMAIN,api.transcy.io
 DOMAIN,api16-access-sg.pangle.io
@@ -46,6 +48,7 @@ DOMAIN,atm-broker-tcp-hok.vasdgame.com
 DOMAIN,autel.com
 DOMAIN,automizely.com
 DOMAIN,autonavi.com
+DOMAIN,avatars.discourse-cdn.com
 DOMAIN,balancer.bb.zeptolab.com
 DOMAIN,basemaps.cartocdn.com
 DOMAIN,bbs.hassbian.com
@@ -61,11 +64,14 @@ DOMAIN,cdn-c.adsmoloco.com
 DOMAIN,cdn-lb.vungle.com
 DOMAIN,cdn.cdnjson.com
 DOMAIN,cdn.dotaoutpost.com
+DOMAIN,cdn.logr-ingest.com
 DOMAIN,cdn.quilljs.com
 DOMAIN,cdn.secomapp.com
 DOMAIN,cdn.shucdn.com
+DOMAIN,cdn.sprig.com
 DOMAIN,cdn.ss-cdn.com
 DOMAIN,cdn.sur.ly
+DOMAIN,cdn.transifex.com
 DOMAIN,cdn2.inner-active.mobi
 DOMAIN,cdn2.jiuse2.cloud
 DOMAIN,cdnimg.clkxqqih.com
@@ -81,6 +87,7 @@ DOMAIN,clients.plex.tv
 DOMAIN,code.tidio.co
 DOMAIN,colamanga.com
 DOMAIN,comm.res.easebar.com
+DOMAIN,community.plex.tv
 DOMAIN,config-security.com
 DOMAIN,config.ads.vungle.com
 DOMAIN,config.monetization-sdk.chartboost.com
@@ -92,9 +99,11 @@ DOMAIN,dashboard.xttlove.uk
 DOMAIN,desktop.dashu.ai
 DOMAIN,dev.visualwebsiteoptimizer.com
 DOMAIN,dianyingxs.cc
+DOMAIN,discover.provider.plex.tv
 DOMAIN,dl.listdl.com
 DOMAIN,docs.boxjs.app
 DOMAIN,enpass.io
+DOMAIN,epg.provider.plex.tv
 DOMAIN,ero-labs.xyz
 DOMAIN,events.ads.vungle.com
 DOMAIN,fifcm.app
@@ -113,6 +122,7 @@ DOMAIN,gfhfdrv.yr9m1oxe.cc
 DOMAIN,ghabovethec.info
 DOMAIN,giftbox.digismoothie.app
 DOMAIN,giftbox.ds-cdn.com
+DOMAIN,global.discourse-cdn.com
 DOMAIN,greatcourses.thld.co
 DOMAIN,gromelink-link-sg.2c450f6kyrw9.eo.dnse3.com
 DOMAIN,guruguru.pro.g123-cpp.com
@@ -162,6 +172,7 @@ DOMAIN,js-server.ure.lol
 DOMAIN,kelpmetorealiuk.com
 DOMAIN,ko-fi.com
 DOMAIN,lexy.com.hk
+DOMAIN,linux.do
 DOMAIN,m.gzmjhzs.com
 DOMAIN,media0.giphy.com
 DOMAIN,mendationforc.info
@@ -176,6 +187,7 @@ DOMAIN,motivate.shopapps.site
 DOMAIN,mp.plex.tv
 DOMAIN,mpm.plex.tv
 DOMAIN,ms.applovin.com
+DOMAIN,music.provider.plex.tv
 DOMAIN,namso-gen.com
 DOMAIN,niceink.xyz
 DOMAIN,nordcdn.com
@@ -193,12 +205,14 @@ DOMAIN,pepcn.com
 DOMAIN,pequotpatrick.click
 DOMAIN,picture.avking.xyz
 DOMAIN,play.catton.tech
+DOMAIN,plex.tv
 DOMAIN,pogothere.xyz
 DOMAIN,polyfill-fastly.net
 DOMAIN,pp.squirai.com
 DOMAIN,prefetch.monetization-sdk.chartboost.com
 DOMAIN,preproduct.onrender.com
 DOMAIN,prvc.io
+DOMAIN,pubsub.plex.tv
 DOMAIN,pusher.com
 DOMAIN,quantumult.app
 DOMAIN,qz1gy.app
@@ -217,6 +231,7 @@ DOMAIN,scrobbles.plex.tv
 DOMAIN,sdgfg78.92mg7.com
 DOMAIN,sdk-events.inner-active.mobi
 DOMAIN,sdn.geekzu.org
+DOMAIN,sea1.discourse-cdn.com
 DOMAIN,secure.apps.shappify.com
 DOMAIN,sentry.qplaygame.com
 DOMAIN,sessions.bugsnag.com
@@ -233,6 +248,7 @@ DOMAIN,snzypic.com
 DOMAIN,soepub.com
 DOMAIN,songshuhui.net
 DOMAIN,sonoff.tech
+DOMAIN,sonos.plex.tv
 DOMAIN,sp-ao.shortpixel.ai
 DOMAIN,ssdk-sg.pangle.io
 DOMAIN,ssr.software
@@ -267,12 +283,15 @@ DOMAIN,tenorshare.com
 DOMAIN,the-engineering-mindset.creator-spring.com
 DOMAIN,theengineeringmindset.com
 DOMAIN,tnc16-alisg.isnssdk.com
+DOMAIN,together.plex.tv
 DOMAIN,toolboxpro.app
 DOMAIN,troutgorgets.com
 DOMAIN,ump.plex.tv
+DOMAIN,use1-turn.fpjs.io
 DOMAIN,utteranc.es
 DOMAIN,uymgg1.com
 DOMAIN,v1.kuroapi.com
+DOMAIN,vod.provider.plex.tv
 DOMAIN,vrgvugostlyhewo.info
 DOMAIN,webview.monetization-sdk.chartboost.com
 DOMAIN,whatshub.top
@@ -319,6 +338,7 @@ DOMAIN,youtonghy.com
 DOMAIN,yyyue.xyz
 DOMAIN,zaf.api.fanbyte.com
 DOMAIN,zxcs.info
+DOMAIN,zxcsol.com
 DOMAIN,zxcstxt.com
 # > DOMAIN-KEYWORD域名关键词匹配
 DOMAIN-KEYWORD,69shu
