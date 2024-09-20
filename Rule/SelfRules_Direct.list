@@ -1,3 +1,5 @@
+# > DOMAIN域名完全匹配
+DOMAIN,v4.plex.com
 # > DOMAIN-SUFFIX域名后缀匹配
 DOMAIN-SUFFIX,jiangxue.fun // Nas服务器
 DOMAIN-SUFFIX,nicesk.xyz // NiceCloud机场订阅
