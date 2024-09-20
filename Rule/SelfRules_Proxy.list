@@ -1,4 +1,16 @@
 # ＞ Log脚本筛选漏网之鱼
+DOMAIN,metadata.provider.plex.tv
+DOMAIN,metadata-static.plex.tv
+DOMAIN,assets.plex.tv
+DOMAIN,scrobbles.plex.tv
+DOMAIN,analytics.plex.tv
+DOMAIN,clients.plex.tv
+DOMAIN,images.plex.tv
+DOMAIN,app.plex.tv
+DOMAIN,mp.plex.tv
+DOMAIN,ump.plex.tv
+DOMAIN,mpm.plex.tv
+DOMAIN,meta.plex.tv
 DOMAIN,0o.zxcstxt.xyz
 DOMAIN,04jb.520m-tdtm008.com
 DOMAIN,5hhyu.com
@@ -290,7 +302,6 @@ DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,ko-fi.com
 DOMAIN-SUFFIX,nordcdn.com
 DOMAIN-SUFFIX,onlyfans.com
-DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,pusher.com
 DOMAIN-SUFFIX,quantumult.app
 DOMAIN-SUFFIX,shark-china.com
