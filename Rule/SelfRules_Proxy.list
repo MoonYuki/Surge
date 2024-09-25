@@ -19,6 +19,7 @@ DOMAIN,analytics.plex.tv
 DOMAIN,api.bdustatic.com
 DOMAIN,api.bidmachine.io
 DOMAIN,api.chairbook82.com
+DOMAIN,api.ipify.org
 DOMAIN,api.iterable.com
 DOMAIN,api.mixpanel.com
 DOMAIN,api.phonebook82.com
@@ -28,6 +29,7 @@ DOMAIN,api.sir90hl.com
 DOMAIN,api.sprig.com
 DOMAIN,api.tablebook82.com
 DOMAIN,api.transcy.io
+DOMAIN,api3.branch.io
 DOMAIN,api16-access-sg.pangle.io
 DOMAIN,api16-dual-event-sg2.pangle.io
 DOMAIN,api16-event-sg2.pangle.io
@@ -62,6 +64,7 @@ DOMAIN,browsingguardapp.com
 DOMAIN,brrub.us
 DOMAIN,cdn-c.adsmoloco.com
 DOMAIN,cdn-lb.vungle.com
+DOMAIN,cdn.branch.io
 DOMAIN,cdn.cdnjson.com
 DOMAIN,cdn.dotaoutpost.com
 DOMAIN,cdn.logr-ingest.com
@@ -106,6 +109,8 @@ DOMAIN,enpass.io
 DOMAIN,epg.provider.plex.tv
 DOMAIN,ero-labs.xyz
 DOMAIN,events.ads.vungle.com
+DOMAIN,favicon.enpass.io
+DOMAIN,features.plex.tv
 DOMAIN,fifcm.app
 DOMAIN,fifthstarlabs.io
 DOMAIN,files.partners.neokyo.com
@@ -118,6 +123,7 @@ DOMAIN,g123.jp
 DOMAIN,ge.dfg3t534.cc
 DOMAIN,geospy.ai
 DOMAIN,germainnappy.click
+DOMAIN,getupnote.com
 DOMAIN,gfhfdrv.yr9m1oxe.cc
 DOMAIN,ghabovethec.info
 DOMAIN,giftbox.digismoothie.app
@@ -172,7 +178,10 @@ DOMAIN,js-server.ure.lol
 DOMAIN,kelpmetorealiuk.com
 DOMAIN,ko-fi.com
 DOMAIN,lexy.com.hk
+DOMAIN,license.enpass.io
+DOMAIN,links.plex.tv
 DOMAIN,linux.do
+DOMAIN,live-detector.svc.transifex.net
 DOMAIN,m.gzmjhzs.com
 DOMAIN,media0.giphy.com
 DOMAIN,mendationforc.info
@@ -237,7 +246,9 @@ DOMAIN,sentry.qplaygame.com
 DOMAIN,sessions.bugsnag.com
 DOMAIN,sf16-static.i18n-pglstatp.com
 DOMAIN,sf19-static.i18n-pglstatp.com
+DOMAIN,shared.akamai.steamstatic.com
 DOMAIN,shark-china.com
+DOMAIN,shunix.com
 DOMAIN,sideloadly.io
 DOMAIN,sign.applep12.com
 DOMAIN,singaporepaya.com
@@ -250,10 +261,12 @@ DOMAIN,songshuhui.net
 DOMAIN,sonoff.tech
 DOMAIN,sonos.plex.tv
 DOMAIN,sp-ao.shortpixel.ai
+DOMAIN,sp.plex.tv
 DOMAIN,ssdk-sg.pangle.io
 DOMAIN,ssr.software
 DOMAIN,stamped.io
 DOMAIN,static.zotabox.com
+DOMAIN,statsigapi.net
 DOMAIN,steamcommunity.com
 DOMAIN,steampowered.com
 DOMAIN,steamstatic.com
@@ -266,6 +279,7 @@ DOMAIN,stun.voipbuster.com
 DOMAIN,stun.voipraider.com
 DOMAIN,stun.voipstunt.com
 DOMAIN,substackcdn.com
+DOMAIN,support.plex.tv
 DOMAIN,surfprivacysafe.com
 DOMAIN,surfsharkstatus.com
 DOMAIN,surugaya-f-s.snva.jp
@@ -278,6 +292,7 @@ DOMAIN,tagss04.pro
 DOMAIN,tailwindui.com
 DOMAIN,taxismaned.top
 DOMAIN,teespring.com
+DOMAIN,telemetry.svc.transifex.net
 DOMAIN,tenkafuma.com
 DOMAIN,tenorshare.com
 DOMAIN,the-engineering-mindset.creator-spring.com
@@ -295,6 +310,8 @@ DOMAIN,vod.provider.plex.tv
 DOMAIN,vrgvugostlyhewo.info
 DOMAIN,webview.monetization-sdk.chartboost.com
 DOMAIN,whatshub.top
+DOMAIN,whois.markmonitor.com
+DOMAIN,whois.verisign-grs.com
 DOMAIN,wins.isprog.com
 DOMAIN,wv.inner-active.mobi
 DOMAIN,www.69xinshu.com
@@ -323,6 +340,7 @@ DOMAIN,www.naixue222.com
 DOMAIN,www.nickzangus.com
 DOMAIN,www.nonmonk.org
 DOMAIN,www.onitsukatiger.com.tw
+DOMAIN,www.plex.tv
 DOMAIN,www.pxucdn.com
 DOMAIN,www.qnapclub.eu
 DOMAIN,www.readbond.com
