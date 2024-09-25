@@ -1,0 +1,12 @@
+#!name=南+论坛签到
+#!desc=南+论坛自动签到脚本
+
+[Script]
+# 创建签到脚本
+南+论坛签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/94ae2449c07f78e6ea44277c831a58c0/raw/southPlus.js
+
+# 获取会话
+获取南+论坛会话=type=http-request,pattern=^https:\/\/www\.south-plus\.net\/plugin\.php\?H_name-tasks\.html,script-path=https://gist.githubusercontent.com/Sliverkiss/94ae2449c07f78e6ea44277c831a58c0/raw/southPlus.js
+
+[MITM]
+hostname = %APPEND% www.south-plus.net
