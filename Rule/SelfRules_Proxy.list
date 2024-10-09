@@ -2,6 +2,7 @@
 DOMAIN,0o.zxcstxt.xyz
 DOMAIN,04jb.520m-tdtm008.com
 DOMAIN,5hhyu.com
+DOMAIN,6x.studio
 DOMAIN,118822.net
 DOMAIN,1096981336964734721.zga.globalconnetct.com
 DOMAIN,a.shlshfm.com
@@ -15,10 +16,12 @@ DOMAIN,api.bdustatic.com
 DOMAIN,api.bidmachine.io
 DOMAIN,api.bigdatacloud.net
 DOMAIN,api.chairbook82.com
+DOMAIN,api.iconify.design
 DOMAIN,api.iterable.com
 DOMAIN,api.mixpanel.com
 DOMAIN,api.phonebook82.com
 DOMAIN,api.preproduct.io
+DOMAIN,api.products.aspose.app
 DOMAIN,api.revenuecat.com
 DOMAIN,api.sir90hl.com
 DOMAIN,api.tablebook82.com
@@ -35,6 +38,7 @@ DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,appleku.net
 DOMAIN,applep12.com
 DOMAIN,asia-m.live
+DOMAIN,assets-v2.super.so
 DOMAIN,assets.applovin.com
 DOMAIN,assets.tapcart.com
 DOMAIN,atappanic.click
@@ -42,8 +46,10 @@ DOMAIN,atm-broker-tcp-hok.vasdgame.com
 DOMAIN,balancer.bb.zeptolab.com
 DOMAIN,basemaps.cartocdn.com
 DOMAIN,bbs.hassbian.com
+DOMAIN,bbs.rohome.net
 DOMAIN,bbs.tgfcer.com
 DOMAIN,bbxy.buzz
+DOMAIN,bbxy.fun
 DOMAIN,bittly.cc
 DOMAIN,blog.233so.com
 DOMAIN,blog.yanghong.dev
@@ -88,6 +94,7 @@ DOMAIN,dianyingxs.cc
 DOMAIN,dl.listdl.com
 DOMAIN,docs.boxjs.app
 DOMAIN,events.ads.vungle.com
+DOMAIN,featureassets.org
 DOMAIN,fifcm.app
 DOMAIN,files.partners.neokyo.com
 DOMAIN,free.yuhengy17.me
@@ -106,6 +113,7 @@ DOMAIN,gromelink-link-sg.2c450f6kyrw9.eo.dnse3.com
 DOMAIN,guruguru.pro.g123-cpp.com
 DOMAIN,h5.0psp.live
 DOMAIN,h5.bkcs.life
+DOMAIN,help.locklauncher.com
 DOMAIN,hgss.6qnbsj2.cc
 DOMAIN,hjw.ekeguajx.xyz
 DOMAIN,hotcultural.site
@@ -119,6 +127,7 @@ DOMAIN,image.maimn.com
 DOMAIN,imagedelivery.net
 DOMAIN,images.dmca.com
 DOMAIN,images.nvshenim.info
+DOMAIN,images.spr.so
 DOMAIN,images.squarespace-cdn.com
 DOMAIN,images.weserv.nl
 DOMAIN,img-cos.mandaoo.com
@@ -144,9 +153,13 @@ DOMAIN,js-server.ure.lol
 DOMAIN,kelpmetorealiuk.com
 DOMAIN,lexy.com.hk
 DOMAIN,linux.do
+DOMAIN,locklauncher.com
+DOMAIN,log.lockchat.app
 DOMAIN,m.gzmjhzs.com
+DOMAIN,maofun.com
 DOMAIN,media0.giphy.com
 DOMAIN,mendationforc.info
+DOMAIN,metrics.svc.k8s.dynabic.com
 DOMAIN,mmp001.scalemonk.com
 DOMAIN,mobile-bastion.com
 DOMAIN,moegirl.uk
@@ -154,6 +167,7 @@ DOMAIN,mofenfa.top
 DOMAIN,momentary.link
 DOMAIN,motivate.shopapps.site
 DOMAIN,ms.applovin.com
+DOMAIN,munchkin.marketo.net
 DOMAIN,namso-gen.com
 DOMAIN,niceink.xyz
 DOMAIN,nsloon.app
@@ -176,12 +190,16 @@ DOMAIN,polyfill-fastly.net
 DOMAIN,pp.squirai.com
 DOMAIN,prefetch.monetization-sdk.chartboost.com
 DOMAIN,preproduct.onrender.com
+DOMAIN,prodregistryv2.org
+DOMAIN,products.aspose.app
 DOMAIN,prvc.io
 DOMAIN,qz1gy.app
+DOMAIN,ragnarokonline.gungho.jp
 DOMAIN,rebless.meacockcuculle.top
 DOMAIN,rebound.postmarkapp.com
 DOMAIN,res.craft.do
 DOMAIN,res1.applovin.com
+DOMAIN,rolab.org
 DOMAIN,rsms.me
 DOMAIN,rt.applovin.com
 DOMAIN,rvw.snva.jp
@@ -220,6 +238,7 @@ DOMAIN,stun.voipbuster.com
 DOMAIN,stun.voipraider.com
 DOMAIN,stun.voipstunt.com
 DOMAIN,substackcdn.com
+DOMAIN,super11.lockchat.app
 DOMAIN,surfprivacysafe.com
 DOMAIN,surfsharkstatus.com
 DOMAIN,surugaya-f-s.snva.jp
@@ -239,7 +258,9 @@ DOMAIN,tps.doubleverify.com
 DOMAIN,troutgorgets.com
 DOMAIN,utteranc.es
 DOMAIN,v1.kuroapi.com
+DOMAIN,v2rayssr.com
 DOMAIN,vrgvugostlyhewo.info
+DOMAIN,webforms.alludo.co
 DOMAIN,webview.monetization-sdk.chartboost.com
 DOMAIN,wins.isprog.com
 DOMAIN,wv.inner-active.mobi
@@ -251,6 +272,7 @@ DOMAIN,www.boquge.com
 DOMAIN,www.bv2.online
 DOMAIN,www.chaipip.com
 DOMAIN,www.clearwater.ca
+DOMAIN,www.cornss.com
 DOMAIN,www.cutecloud.net
 DOMAIN,www.dictionarystore.com
 DOMAIN,www.eisys-bcs.jp
