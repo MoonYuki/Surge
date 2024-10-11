@@ -1,0 +1,4 @@
+
+
+[URL Rewrite]
+^https?:\/\/bbs\.rohome\.net http://bbs.rohome.cn 302
