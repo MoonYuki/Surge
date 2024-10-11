@@ -4,8 +4,8 @@
 [Proxy Group]
 ♽Eric瞬连 = smart, url=http://www.google.com/generate_204, policy-path=https://sl.eric.vpn/web/sub, update-interval=6000
 
-[mitm]
+[MITM]
 *.eric.vpn
 
-[script]
+[Script]
 瞬连vpn = type = http-request,pattern=^https?:\/\/sl\.eric\.vpn\/web\/sub,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/SLVPN.js,script-update-interval=0
