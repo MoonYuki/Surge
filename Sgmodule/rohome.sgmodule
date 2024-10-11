@@ -1,4 +1,6 @@
-
+#!name=浆糊论坛重定向
+#!desc=仙境传说RO浆糊论坛（小站）重定向
+#!author=MoonYuki
 
 [URL Rewrite]
 ^https?:\/\/bbs\.rohome\.net http://bbs.rohome.cn 302
