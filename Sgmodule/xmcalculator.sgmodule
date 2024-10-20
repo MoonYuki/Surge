@@ -1,8 +1,0 @@
-#!name=小明计算器
-#!desc=小明计算器解锁
-
-[Script]
-xmjsq.js=type=http-response,pattern=^https?:\/\/jsq\.mingcalc\.cn\/XMGetMeCount\.ashx$,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/XMCalculatorVipCrack.js
-
-[MITM]
-hostname = %APPEND% jsq.mingcalc.cn
