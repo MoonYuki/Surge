@@ -4,7 +4,7 @@
 #!author=MoonYuki
 
 [Body Rewrite]
-http-response-jq ^https?:\/\/compass\.xinzhi\.space\/api\/v1\/isVip.+$ '.data.is_vip = 1'
+http-response-jq ^https?:\/\/compass\.xinzhi\.space\/api\/v1\/isVip.*?$ '.data.is_vip = 1'
 
 [MITM]
 hostname=%APPEND% compass.xinzhi.space
