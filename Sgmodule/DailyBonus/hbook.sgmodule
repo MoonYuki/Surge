@@ -11,4 +11,4 @@
 获取刺猬猫会话=type=http-request,pattern=^https:\/\/app\.hbooker\.com\/task\/get_all_task_list,script-path=https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
 
 [MITM]
-hostname = %APPEND% app.hbooker.com
+hostname=%APPEND% app.hbooker.com
