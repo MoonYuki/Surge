@@ -1,6 +1,6 @@
 #!name=南+论坛签到
 #!desc=南+论坛自动签到脚本
-#!catgeory=签到模块
+#!category=签到模块
 
 [Script]
 # 创建签到脚本
