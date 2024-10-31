@@ -1,5 +1,6 @@
 #!name=上海停车签到
 #!desc=上海停车app自动签到脚本
+#!category=签到模块
 #!author=MoonYuki
 
 [Script]
