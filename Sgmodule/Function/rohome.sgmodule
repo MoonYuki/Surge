@@ -1,5 +1,6 @@
 #!name=浆糊论坛重定向
 #!desc=仙境传说RO浆糊论坛（小站）重定向
+#!category=功能模块
 #!author=MoonYuki
 
 [URL Rewrite]
