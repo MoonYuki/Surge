@@ -6,8 +6,8 @@
 [Header Rewrite]
 http-request ^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%[^\/]+$ header-del X-RevenueCat-ETag
 
-[Script]
-#dgjsq.js=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Dgjsq/dgjsq.js
+[Body Rewrite]
+http-response-jq ^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%[^\/]+$ '.subscriber.non_subscriptions={"electricalcalculations.pro.lifetime":[{"id":"601ba6f9dd","is_sandbox":false,"purchase_date":"2024-06-02T07:12:56Z","original_purchase_date":"2024-06-02T07:12:56Z","store":"app_store","store_transaction_id":"350001993672141"}]}|.subscriber.other_purchases={"electricalcalculations.pro.lifetime":{"purchase_date":"2024-06-02T07:12:56Z"}}|.subscriber.management_url="https://apps.apple.com/account/subscriptions"|.subscriber.entitlements.pro.purchase_date="2024-06-02T07:12:56Z"|.subscriber.entitlements.pro.product_identifier="electricalcalculations.pro.lifetime"|.subscriber.entitlements.pro.expires_date=null|.subscriber.original_purchase_date="2024-06-02T07:12:56Z"'
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
