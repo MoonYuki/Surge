@@ -1,0 +1,13 @@
+#!name=电工计算器
+#!desc=电工计算器解锁
+#!category = 解锁模块
+#!author=moonyuki
+
+[Header Rewrite]
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%[^\/]+$ header-del X-RevenueCat-ETag
+
+[Script]
+#dgjsq.js=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Dgjsq/dgjsq.js
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
