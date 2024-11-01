@@ -1,5 +1,6 @@
 #!name=浦大喜奔去广告
 #!desc=浦大喜奔app去掉开屏广告
+#!category=去广告模块
 #!author=MoonYuki
 
 [URL Rewrite]
