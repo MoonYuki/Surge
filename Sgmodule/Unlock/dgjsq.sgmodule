@@ -10,4 +10,4 @@ http-request ^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%
 http-response-jq ^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/\$RCAnonymousID%[^\/]+$ '.subscriber.non_subscriptions={"electricalcalculations.pro.lifetime":[{"id":"0123456789","is_sandbox":false,"purchase_date":"2023-12-31T16:00:00Z","original_purchase_date":"2023-12-31T16:00:00Z","store":"app_store","store_transaction_id":"350001992123456"}]}|.subscriber.other_purchases={"electricalcalculations.pro.lifetime":{"purchase_date":"2023-12-31T16:00:00Z"}}|.subscriber.management_url="https://apps.apple.com/account/subscriptions"|.subscriber.entitlements.pro.purchase_date="2023-12-31T16:00:00Z"|.subscriber.entitlements.pro.product_identifier="electricalcalculations.pro.lifetime"|.subscriber.entitlements.pro.expires_date=null|.subscriber.original_purchase_date="2023-12-31T16:00:00Z"'
 
 [MITM]
-hostname=%APPEND% api.revenuecat.com
+hostname = %APPEND% api.revenuecat.com
