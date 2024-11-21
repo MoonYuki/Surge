@@ -7,4 +7,4 @@
 http-response-jq ^https?:\/\/user-kaji-api\.b612kaji\.com\/v1\/purchase\/subscription\/subscriber\/status.*?$ '.result.products += [{"managed": false, "status": "ACTIVE", "startDate": 1640573194000, "productId": "com.campmobile.snowcamera.vip.oneyear", "expireDate": 4072257165000}] | .result.activated = true'
 
 [MITM]
-hostname=%APPEND% user-kaji-api.b612kaji.com
+hostname = %APPEND% user-kaji-api.b612kaji.com
