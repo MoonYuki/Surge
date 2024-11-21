@@ -10,4 +10,4 @@ http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/_[^\/]+$|receip
 http-response-jq ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/_[^\/]+$|receipts$) '.subscriber.subscriptions={"com.pspdfkit.viewer.sub.pro.yearly":{"store":"app_store","purchase_date":"2023-09-01T11:00:00Z","ownership_type":"PURCHASED","original_purchase_date":"2023-09-01T11:00:00Z","expires_date":"2099-12-31T12:00:00Z"}}|.subscriber.entitlements={"sub.pro":{"store":"app_store","purchase_date":"2023-09-01T11:00:00Z","ownership_type":"PURCHASED","original_purchase_date":"2023-09-01T11:00:00Z","product_identifier":"com.pspdfkit.viewer.sub.pro.yearly","expires_date":"2099-12-31T12:00:00Z"}}'
 
 [MITM]
-hostname=%APPEND% api.revenuecat.com
+hostname = %APPEND% api.revenuecat.com
