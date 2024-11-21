@@ -6,4 +6,4 @@
 snailsleep=type=http-response,pattern=^https?:\/\/snailsleep\.net\/snail\/v\d\/profile\/get.+,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/Script/Snailsleep/snailsleep.js
 
 [MITM]
-hostname=%APPEND% snailsleep.net
+hostname = %APPEND% snailsleep.net
