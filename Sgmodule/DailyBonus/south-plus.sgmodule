@@ -10,4 +10,4 @@
 获取南+论坛会话=type=http-response,pattern=^https:\/\/www\.south-plus\.net\/plugin\.php\?H_name-tasks\.html,requires-body=true,script-path=https://gist.githubusercontent.com/Sliverkiss/94ae2449c07f78e6ea44277c831a58c0/raw/southPlus.js
 
 [MITM]
-hostname=%APPEND% www.south-plus.net
+hostname = %APPEND% www.south-plus.net
