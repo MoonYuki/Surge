@@ -11,7 +11,7 @@
 
 [Rule]
 # 开屏广告
-DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,adservice.sigmob.cn,REJECT,extended-matching,pre-matching
 # 友盟
 DOMAIN,cnlogs.umeng.com,REJECT,extended-matching,pre-matching
 DOMAIN,errlog.umeng.com,REJECT,extended-matching,pre-matching
