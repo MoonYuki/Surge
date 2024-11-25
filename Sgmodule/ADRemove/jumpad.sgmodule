@@ -1,0 +1,10 @@
+#!name=JUMP去广告
+#!desc=JUMPapp去掉开屏广告
+#!category=去广告模块
+#!author=MoonYuki
+
+[Rule]
+# 开屏广告
+DOMAIN,zlsdk.1rtb.net,REJECT,extended-matching,pre-matching
+DOMAIN,s3plus.meituan.net,REJECT-TINYGIF,extended-matching,pre-matching
+DOMAIN,images.pinduoduo.com,REJECT-TINYGIF,extended-matching,pre-matching
