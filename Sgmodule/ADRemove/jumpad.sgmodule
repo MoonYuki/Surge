@@ -8,3 +8,4 @@
 DOMAIN,zlsdk.1rtb.net,REJECT,extended-matching,pre-matching
 DOMAIN,s3plus.meituan.net,REJECT-TINYGIF,extended-matching,pre-matching
 DOMAIN,images.pinduoduo.com,REJECT-TINYGIF,extended-matching,pre-matching
+DOMAIN,qh-material.taobao.com,REJECT-TINYGIF,extended-matching,pre-matching
