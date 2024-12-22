@@ -21,7 +21,7 @@ function getSession() {
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
     $.log('获取会话成功');
-    $.desc = '🎉成功获取会话，可以关闭相应脚本';
+    $.desc = '🎉成功获取会话';
   } else {
     $.log('获取会话失败');
     $.desc = '❌获取会话失败，请稍后再试';
