@@ -16,9 +16,7 @@ $.isRequest = typeof $request !== 'undefined';
 function getSession() {
   $.log('开始获取会话');
   const session = {
-    url: $request.url
     headers: $request.headers
-    body: $request.body
   };
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
@@ -35,8 +33,10 @@ async function checkIn() {
   const checkinOpts = $.getjson($.KEY_login);
   if (!checkinOpts) {
     $.log('没有获取会话');
-    $.desc = '⚠️请打开erolabs，登录后签到获取会话';
+    $.desc = '⚠️请登录erolabs，打开签到页获取会话';
   } else {
+    checkinOpts.url = "https://www.ero-labs.com/api/v2/checkin"
+    checkinOpts.body = ""
     try {
       const resp = await $.http.post(checkinOpts);
       const responseBody = JSON.parse(resp.body);
