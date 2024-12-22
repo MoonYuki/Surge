@@ -1,5 +1,5 @@
-const $ = new Env('上海停车签到');
-$.KEY_login = 'moonyuki_login_shparking';
+const $ = new Env('erolabs签到');
+$.KEY_login = 'moonyuki_login_erolabs';
 $.isRequest = typeof $request !== 'undefined';
 
 !(async () => {
@@ -16,7 +16,9 @@ $.isRequest = typeof $request !== 'undefined';
 function getSession() {
   $.log('开始获取会话');
   const session = {
+    url: $request.url
     headers: $request.headers
+    body: $request.body
   };
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
@@ -33,19 +35,20 @@ async function checkIn() {
   const checkinOpts = $.getjson($.KEY_login);
   if (!checkinOpts) {
     $.log('没有获取会话');
-    $.desc = '⚠️请打开上海停车app，登录后获取会话';
+    $.desc = '⚠️请打开erolabs，登录后签到获取会话';
   } else {
-    checkinOpts.url = 'https://api.shanghai-parking.com/sas/shcx/app/score/credits-change';
-    checkinOpts.body = {"eventType": "08"};
     try {
       const resp = await $.http.post(checkinOpts);
       const responseBody = JSON.parse(resp.body);
       $.log(JSON.stringify(responseBody));
 
-      if (responseBody.code == 200) {
+      if (responseBody.status == "SUCCESS") {
         $.log('签到成功');
-        $.desc = `✅签到成功，签到获得${responseBody.data.creditsChange}点积分，目前拥有${responseBody.data.credits}点积分`;
-      } else if(responseBody.message == "您已签到"){
+        $.desc = `✅签到成功`;
+      } else if(responseBody.message == "簽到處理中,請勿連續點選"){
+        $.log('今日已签到');
+        $.desc = `💖今日已签到`;
+      }else if(responseBody.message == "簽到處理中,請勿連續點選"){
         $.log('今日已签到');
         $.desc = `💖今日已签到`;
       } else {
