@@ -1,9 +1,9 @@
 const consolelog = false;
 const url = $request.url;
-const $ = new Env("京东比价");
+const $ = new Env("淘宝比价");
 var regex = /product\/graphext\/(\d+)\.html/;
 var match = url.match(regex);
-let shareUrl = "https://item.m.jd.com/product/" + match[1] + '.html'
+let shareUrl = "https://item.taobao.com/item.htm?id=" + match[1];
 
 request_history_price(shareUrl).then(data => {
     if (data) {
