@@ -45,7 +45,7 @@ async function checkIn() {
       if (responseBody.status == "SUCCESS") {
         $.log('签到成功');
         $.desc = `✅签到成功`;
-      } else if(responseBody.message == "簽到處理中,請勿連續點選"){
+      } else if(responseBody.message == "今日已簽到,無法重覆簽到"){
         $.log('今日已签到');
         $.desc = `💖今日已签到`;
       }else if(responseBody.message == "簽到處理中,請勿連續點選"){
