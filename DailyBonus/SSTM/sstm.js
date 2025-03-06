@@ -79,7 +79,17 @@ async function checkIn() {
   const plupload = pluploadMatch[1];
   $.log(`提取的 csrfKey: ${csrfKey}`);
   $.log(`提取的 plupload: ${plupload}`);
-
+  
+  // 提取 lastSeenID
+  const lastSeenIdMatch = topicHtml.match(/<a href="https:\/\/sstm\.moe\/topic\/(\d+).*?\?do=findComment&amp;comment=(\d+)"[^>]*>发布于<time[^>]*datetime='(\d{4}-\d{2}-\d{2})[^>]*>/);
+  if (!lastSeenIdMatch || !lastSeenIdMatch[2]) {
+    $.log('未找到 lastSeenID');
+    $.desc = '❌未找到 lastSeenID';
+    return;
+  }
+  const lastSeenID = lastSeenIdMatch[2];
+  $.log(`提取的 lastSeenID: ${lastSeenID}`);
+  
   // 获取 topic_comment_${postId}_upload
   const uploaderUrl = `${topicUrl}?csrfKey=${csrfKey}&getUploader=topic_comment_${postId}`;
   const uploaderResponse = await $.http.get({ url: uploaderUrl });
@@ -92,26 +102,6 @@ async function checkIn() {
   }
   const topicCommentUpload = uploaderMatch[1];
   $.log(`提取的 topic_comment_${postId}_upload: ${topicCommentUpload}`);
-
-  // 提取 lastSeenID
-  const lastSeenIdMatch = topicHtml.match(/<a href="https:\/\/sstm\.moe\/topic\/(\d+).*?\?do=findComment&amp;comment=(\d+)"[^>]*>发布于<time[^>]*datetime='(\d{4}-\d{2}-\d{2})[^>]*>/);
-  if (!lastSeenIdMatch || !lastSeenIdMatch[2]) {
-    $.log('未找到 lastSeenID');
-    $.desc = '❌未找到 lastSeenID';
-    return;
-  }
-  const lastSeenID = lastSeenIdMatch[2];
-  const lastSeenDate = lastSeenIdMatch[3];
-  $.log(`提取的 lastSeenID: ${lastSeenID}`);
-  $.log(`提取的 lastSeenDate: ${lastSeenDate}`);
-
-  // 检查日期是否匹配当天
-  const todayDateISO = new Date().toISOString().split('T')[0]; // 格式化为 YYYY-MM-DD
-  if (lastSeenDate !== todayDateISO) {
-    $.log('lastSeenID 日期不匹配当天');
-    $.desc = '❌lastSeenID 日期不匹配当天';
-    return;
-  }
 
   // 构造 POST 请求体
   const postBody = {
