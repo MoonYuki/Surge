@@ -1,0 +1,13 @@
+#!name=sstm论坛签到
+#!desc=sstm论坛自动签到脚本
+#!category=签到模块
+
+[Script]
+# 创建签到脚本
+sstm论坛签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://raw.githubusercontent.com/MoonYuki/Surge/refs/heads/main/DailyBonus/SSTM/sstm.js
+
+# 获取会话
+获取sstm论坛会话=type=http-response,pattern=^https:\/\/sstm\.moe\/topic\/(\d+)-[^\/]+\/\d{4}\/\d{1,2}\/\d{1,2},requires-body=true,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/refs/heads/main/DailyBonus/SSTM/sstm.js
+
+[MITM]
+hostname = %APPEND% sstm.moe
