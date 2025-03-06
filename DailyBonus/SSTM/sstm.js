@@ -31,6 +31,14 @@ function getSession() {
 async function checkIn() {
   $.log('开始签到');
 
+  // 获取登录信息
+  const loginInfo = $.getjson($.KEY_login);
+  if (!loginInfo || !loginInfo.headers) {
+    $.log('未找到登录信息，请先获取会话');
+    $.desc = '❌未找到登录信息，请先获取会话';
+    return;
+  }
+
   // 获取当天日期，格式为 YYYYMD
   function getTodayDate() {
     const today = new Date();
@@ -42,7 +50,10 @@ async function checkIn() {
 
   // 获取签到区页面内容
   const forumUrl = "https://sstm.moe/forum/72-%E5%90%8C%E7%9B%9F%E7%AD%BE%E5%88%B0%E5%8C%BA/";
-  const forumResponse = await $.http.get({ url: forumUrl });
+  const forumResponse = await $.http.get({
+    url: forumUrl,
+    headers: loginInfo.headers // 使用登录信息中的 headers
+  });
   const forumHtml = forumResponse.body;
 
   // 提取当天日期的帖子 URL 和帖子 ID
@@ -59,7 +70,10 @@ async function checkIn() {
   $.log(`提取的帖子ID: ${postId}`);
 
   // 获取帖子页面内容
-  const topicResponse = await $.http.get({ url: topicUrl });
+  const topicResponse = await $.http.get({
+    url: topicUrl,
+    headers: loginInfo.headers // 使用登录信息中的 headers
+  });
   const topicHtml = topicResponse.body;
 
   // 提取 csrfKey 和 plupload
@@ -87,7 +101,10 @@ async function checkIn() {
   
   // 获取 topic_comment_${postId}_upload
   const uploaderUrl = `${topicUrl}?csrfKey=${csrfKey}&getUploader=topic_comment_${postId}`;
-  const uploaderResponse = await $.http.get({ url: uploaderUrl });
+  const uploaderResponse = await $.http.get({
+    url: uploaderUrl,
+    headers: loginInfo.headers // 使用登录信息中的 headers
+  });
   const uploaderHtml = uploaderResponse.body;
   const uploaderMatch = uploaderHtml.match(new RegExp(`name="topic_comment_${postId}_upload" value="([^"]+)"`));
   if (!uploaderMatch || !uploaderMatch[1]) {
@@ -116,6 +133,7 @@ async function checkIn() {
   const checkinOpts = {
     url: topicUrl,
     headers: {
+      ...loginInfo.headers, // 使用登录信息中的 headers
       "Content-Type": "application/x-www-form-urlencoded"
     },
     body: Object.keys(postBody).map(key => `${key}=${encodeURIComponent(postBody[key])}`).join("&")
