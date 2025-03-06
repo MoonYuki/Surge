@@ -5,6 +5,9 @@ $.isRequest = typeof $request !== 'undefined';
 // 用于存储前一次访问的 URL
 let previousUrl = null;
 
+// 用于存储会话 Cookies
+let sessionCookies = null;
+
 !(async () => {
   if ($.isRequest) {
     getSession();
@@ -19,12 +22,14 @@ let previousUrl = null;
 function getSession() {
   $.log('开始获取会话');
   const session = {
-    headers: $request.headers
+    headers: $request.headers,
+    cookies: $request.headers['Cookie'] || $request.headers['cookie'] // 记录 Cookies
   };
   $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
     $.log('获取会话成功');
     $.desc = '🎉成功获取会话';
+    sessionCookies = session.cookies; // 初始化 sessionCookies
   } else {
     $.log('获取会话失败');
     $.desc = '❌获取会话失败，请稍后再试';
@@ -48,7 +53,8 @@ async function checkIn() {
   const forumResponse = await $.http.get({
     url: forumUrl,
     headers: {
-      "Referer": previousUrl || forumUrl // 使用前一次访问的 URL 作为 Referer
+      "Referer": previousUrl || forumUrl, // 使用前一次访问的 URL 作为 Referer
+      "Cookie": sessionCookies // 包含 Cookies
     }
   });
   previousUrl = forumUrl; // 更新前一次访问的 URL
@@ -71,7 +77,8 @@ async function checkIn() {
   const topicResponse = await $.http.get({
     url: topicUrl,
     headers: {
-      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
+      "Referer": previousUrl, // 使用前一次访问的 URL 作为 Referer
+      "Cookie": sessionCookies // 包含 Cookies
     }
   });
   previousUrl = topicUrl; // 更新前一次访问的 URL
@@ -105,7 +112,8 @@ async function checkIn() {
   const uploaderResponse = await $.http.get({
     url: uploaderUrl,
     headers: {
-      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
+      "Referer": previousUrl, // 使用前一次访问的 URL 作为 Referer
+      "Cookie": sessionCookies // 包含 Cookies
     }
   });
   previousUrl = uploaderUrl; // 更新前一次访问的 URL
@@ -138,7 +146,8 @@ async function checkIn() {
     url: topicUrl,
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
+      "Referer": previousUrl, // 使用前一次访问的 URL 作为 Referer
+      "Cookie": sessionCookies // 包含 Cookies
     },
     body: Object.keys(postBody).map(key => `${key}=${encodeURIComponent(postBody[key])}`).join("&")
   };
