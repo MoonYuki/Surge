@@ -47,7 +47,7 @@ async function checkIn() {
 
   // 提取当天日期的帖子 URL 和帖子 ID
   const todayDate = getTodayDate();
-  const postMatch = forumHtml.match(new RegExp(`<a href="(https://sstm.moe/topic/(\\d+).*签到.*${todayDate})"`));
+  const postMatch = forumHtml.match(new RegExp(`<a\\s+[^>]*href="(https://sstm\\.moe/topic/(\\d+)-[^"]*?${todayDate}[^"]*?)"`));
   if (!postMatch || !postMatch[1] || !postMatch[2]) {
     $.log('未找到当天签到帖子');
     $.desc = '❌未找到当天签到帖子';
