@@ -31,13 +31,13 @@ function getSession() {
 async function checkIn() {
   $.log('开始签到');
 
-  // 获取当天日期，格式为 YYYY/M/D
+  // 获取当天日期，格式为 YYYYMD
   function getTodayDate() {
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth() + 1; // 月份从0开始，需要+1
     const day = today.getDate();
-    return `${year}/${month}/${day}`;
+    return `${year}${month}${day}`;
   }
 
   // 获取签到区页面内容
