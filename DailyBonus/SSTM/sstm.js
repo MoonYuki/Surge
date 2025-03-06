@@ -2,6 +2,9 @@ const $ = new Env('sstm签到');
 $.KEY_login = 'moonyuki_login_sstm';
 $.isRequest = typeof $request !== 'undefined';
 
+// 用于存储前一次访问的 URL
+let previousUrl = null;
+
 !(async () => {
   if ($.isRequest) {
     getSession();
@@ -42,7 +45,13 @@ async function checkIn() {
 
   // 获取签到区页面内容
   const forumUrl = "https://sstm.moe/forum/72-%E5%90%8C%E7%9B%9F%E7%AD%BE%E5%88%B0%E5%8C%BA/";
-  const forumResponse = await $.http.get({ url: forumUrl });
+  const forumResponse = await $.http.get({
+    url: forumUrl,
+    headers: {
+      "Referer": previousUrl || forumUrl // 使用前一次访问的 URL 作为 Referer
+    }
+  });
+  previousUrl = forumUrl; // 更新前一次访问的 URL
   const forumHtml = forumResponse.body;
 
   // 提取当天日期的帖子 URL 和帖子 ID
@@ -59,7 +68,13 @@ async function checkIn() {
   $.log(`提取的帖子ID: ${postId}`);
 
   // 获取帖子页面内容
-  const topicResponse = await $.http.get({ url: topicUrl });
+  const topicResponse = await $.http.get({
+    url: topicUrl,
+    headers: {
+      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
+    }
+  });
+  previousUrl = topicUrl; // 更新前一次访问的 URL
   const topicHtml = topicResponse.body;
 
   // 提取 csrfKey 和 plupload
@@ -87,7 +102,13 @@ async function checkIn() {
   
   // 获取 topic_comment_${postId}_upload
   const uploaderUrl = `${topicUrl}?csrfKey=${csrfKey}&getUploader=topic_comment_${postId}`;
-  const uploaderResponse = await $.http.get({ url: uploaderUrl });
+  const uploaderResponse = await $.http.get({
+    url: uploaderUrl,
+    headers: {
+      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
+    }
+  });
+  previousUrl = uploaderUrl; // 更新前一次访问的 URL
   const uploaderHtml = uploaderResponse.body;
   const uploaderMatch = uploaderHtml.match(new RegExp(`name="topic_comment_${postId}_upload" value="([^"]+)"`));
   if (!uploaderMatch || !uploaderMatch[1]) {
@@ -116,7 +137,8 @@ async function checkIn() {
   const checkinOpts = {
     url: topicUrl,
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": previousUrl // 使用前一次访问的 URL 作为 Referer
     },
     body: Object.keys(postBody).map(key => `${key}=${encodeURIComponent(postBody[key])}`).join("&")
   };
