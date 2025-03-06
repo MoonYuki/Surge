@@ -58,7 +58,7 @@ async function checkIn() {
 
   // 提取当天日期的帖子 URL 和帖子 ID
   const todayDate = getTodayDate();
-  const postMatch = forumHtml.match(new RegExp(`<a\\s+[^>]*href="(https://sstm\\.moe/topic/(\\d+)-[^"]*?${todayDate}[^"]*?)"`));
+  const postMatch = forumHtml.match(new RegExp(`<a\\s+[^>]*href="(https://sstm\\.moe/topic/(\\d+)-[^"]*?${todayDate}[^"]*?)\\?do=getNewComment"`));
   if (!postMatch || !postMatch[1] || !postMatch[2]) {
     $.log('未找到当天签到帖子');
     $.desc = '❌未找到当天签到帖子';
@@ -106,10 +106,10 @@ async function checkIn() {
     headers: loginInfo.headers // 使用登录信息中的 headers
   });
   const uploaderHtml = uploaderResponse.body;
-  const uploaderMatch = uploaderHtml.match(new RegExp(`name="topic_comment_${postId}_upload" value="([^"]+)"`));
+  const uploaderMatch = uploaderHtml.match(new RegExp(`name="topic_comment_${postId}_upload"[^＞]+value="([^"]+)"`));
   if (!uploaderMatch || !uploaderMatch[1]) {
-    $.log('未找到 topic_comment_${postId}_upload');
-    $.desc = '❌未找到 topic_comment_${postId}_upload';
+    $.log(`未找到 topic_comment_${postId}_upload`);
+    $.desc = `❌未找到 topic_comment_${postId}_upload`;
     return;
   }
   const topicCommentUpload = uploaderMatch[1];
