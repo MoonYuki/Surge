@@ -14,22 +14,17 @@ $.isRequest = typeof $request !== 'undefined';
   .finally(() => $.done());
 
 function getSession() {
-  // 判断 URL 中是否包含 %E7%89%88%E4%B8%BB%E6%8B%9B%E5%8B%9F%E5%8C%BA%E7%AD%BE%E5%88%B0
-  if ($request.url.includes('%E7%89%88%E4%B8%BB%E6%8B%9B%E5%8B%9F%E5%8C%BA%E7%AD%BE%E5%88%B0')) {
-    $.log('开始获取会话');
-    const session = {
-      headers: $request.headers
-    };
-    $.log(JSON.stringify(session));
-    if ($.setjson(session, $.KEY_login)) {
-      $.log('获取会话成功');
-      $.desc = '🎉成功获取会话';
-    } else {
-      $.log('获取会话失败');
-      $.desc = '❌获取会话失败，请稍后再试';
-    }
+  $.log('开始获取会话');
+  const session = {
+    headers: $request.headers
+  };
+  $.log(JSON.stringify(session));
+  if ($.setjson(session, $.KEY_login)) {
+    $.log('获取会话成功');
+    $.desc = '🎉成功获取会话';
   } else {
-    $.log('当前 URL 不匹配，跳过获取会话');
+    $.log('获取会话失败');
+    $.desc = '❌获取会话失败，请稍后再试';
   }
 }
 
