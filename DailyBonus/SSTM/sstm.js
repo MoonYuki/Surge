@@ -1,5 +1,5 @@
-const $ = new Env('erolabs签到');
-$.KEY_login = 'moonyuki_login_erolabs';
+const $ = new Env('sstm签到');
+$.KEY_login = 'moonyuki_login_sstm';
 $.isRequest = typeof $request !== 'undefined';
 
 !(async () => {
@@ -14,60 +14,146 @@ $.isRequest = typeof $request !== 'undefined';
   .finally(() => $.done());
 
 function getSession() {
-  $.log('开始获取会话');
-  const session = {
-    headers: $request.headers
-  };
+  // 判断 URL 中是否包含 %E7%89%88%E4%B8%BB%E6%8B%9B%E5%8B%9F%E5%8C%BA%E7%AD%BE%E5%88%B0
+  if ($request.url.includes('%E7%89%88%E4%B8%BB%E6%8B%9B%E5%8B%9F%E5%8C%BA%E7%AD%BE%E5%88%B0')) {
+    $.log('开始获取会话');
+    const session = {
+      headers: $request.headers
+    };
     $.log(JSON.stringify(session));
-  if ($.setjson(session, $.KEY_login)) {
-    $.log('获取会话成功');
-    $.desc = '🎉成功获取会话';
+    if ($.setjson(session, $.KEY_login)) {
+      $.log('获取会话成功');
+      $.desc = '🎉成功获取会话';
+    } else {
+      $.log('获取会话失败');
+      $.desc = '❌获取会话失败，请稍后再试';
+    }
   } else {
-    $.log('获取会话失败');
-    $.desc = '❌获取会话失败，请稍后再试';
+    $.log('当前 URL 不匹配，跳过获取会话');
   }
 }
 
 async function checkIn() {
   $.log('开始签到');
-  const checkinOpts = $.getjson($.KEY_login);
-  if (!checkinOpts) {
-    $.log('没有获取会话');
-    $.desc = '⚠️请登录erolabs，打开签到页获取会话';
-  } else {
-    checkinOpts.url = "https://www.ero-labs.com/api/v2/checkin"
-    checkinOpts.body = ""
-    try {
-      const resp = await $.http.post(checkinOpts);
-      const responseBody = JSON.parse(resp.body);
-      $.log(JSON.stringify(responseBody));
 
-      if (responseBody.status == "SUCCESS") {
-        $.log('签到成功');
-        $.desc = `✅签到成功`;
-      } else if(responseBody.message == "今日已簽到,無法重覆簽到"){
-        $.log('今日已签到');
-        $.desc = `💖今日已签到`;
-      }else if(responseBody.message == "簽到處理中,請勿連續點選"){
-        $.log('今日已签到');
-        $.desc = `💖今日已签到`;
-      } else {
-        $.log('签到异常');
-        $.desc = `❌签到异常，${responseBody.message}`;
-      }
-    } catch (err) {
-      $.log(err);
-      $.log('签到失败');
-      $.desc = `❌签到失败，详情:${err}`;
-    }
+  // 获取当天日期，格式为 YYYY/M/D
+  function getTodayDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1; // 月份从0开始，需要+1
+    const day = today.getDate();
+    return `${year}/${month}/${day}`;
   }
-}
 
-function showMsg() {
-  if (!$.desc) {
+  // 获取签到区页面内容
+  const forumUrl = "https://sstm.moe/forum/72-%E5%90%8C%E7%9B%9F%E7%AD%BE%E5%88%B0%E5%8C%BA/";
+  const forumResponse = await $.http.get({ url: forumUrl });
+  const forumHtml = forumResponse.body;
+
+  // 提取当天日期的帖子 URL 和帖子 ID
+  const todayDate = getTodayDate();
+  const postMatch = forumHtml.match(new RegExp(`<a href="(https://sstm.moe/topic/(\\d+).*签到.*${todayDate})"`));
+  if (!postMatch || !postMatch[1] || !postMatch[2]) {
+    $.log('未找到当天签到帖子');
+    $.desc = '❌未找到当天签到帖子';
     return;
   }
-  $.msg($.name, $.subt, $.desc);
+  const topicUrl = postMatch[1];
+  const postId = postMatch[2];
+  $.log(`提取的帖子URL: ${topicUrl}`);
+  $.log(`提取的帖子ID: ${postId}`);
+
+  // 获取帖子页面内容
+  const topicResponse = await $.http.get({ url: topicUrl });
+  const topicHtml = topicResponse.body;
+
+  // 提取 csrfKey 和 plupload
+  const csrfKeyMatch = topicHtml.match(/name="csrfKey" value="([^"]+)"/);
+  const pluploadMatch = topicHtml.match(/name="plupload" value="([^"]+)"/);
+  if (!csrfKeyMatch || !pluploadMatch) {
+    $.log('未找到 csrfKey 或 plupload');
+    $.desc = '❌未找到 csrfKey 或 plupload';
+    return;
+  }
+  const csrfKey = csrfKeyMatch[1];
+  const plupload = pluploadMatch[1];
+  $.log(`提取的 csrfKey: ${csrfKey}`);
+  $.log(`提取的 plupload: ${plupload}`);
+
+  // 获取 topic_comment_${postId}_upload
+  const uploaderUrl = `${topicUrl}?csrfKey=${csrfKey}&getUploader=topic_comment_${postId}`;
+  const uploaderResponse = await $.http.get({ url: uploaderUrl });
+  const uploaderHtml = uploaderResponse.body;
+  const uploaderMatch = uploaderHtml.match(new RegExp(`name="topic_comment_${postId}_upload" value="([^"]+)"`));
+  if (!uploaderMatch || !uploaderMatch[1]) {
+    $.log('未找到 topic_comment_${postId}_upload');
+    $.desc = '❌未找到 topic_comment_${postId}_upload';
+    return;
+  }
+  const topicCommentUpload = uploaderMatch[1];
+  $.log(`提取的 topic_comment_${postId}_upload: ${topicCommentUpload}`);
+
+  // 提取 lastSeenID
+  const lastSeenIdMatch = topicHtml.match(/<a href="https:\/\/sstm\.moe\/topic\/(\d+).*?\?do=findComment&amp;comment=(\d+)"[^>]*>发布于<time[^>]*datetime='(\d{4}-\d{2}-\d{2})[^>]*>/);
+  if (!lastSeenIdMatch || !lastSeenIdMatch[2]) {
+    $.log('未找到 lastSeenID');
+    $.desc = '❌未找到 lastSeenID';
+    return;
+  }
+  const lastSeenID = lastSeenIdMatch[2];
+  const lastSeenDate = lastSeenIdMatch[3];
+  $.log(`提取的 lastSeenID: ${lastSeenID}`);
+  $.log(`提取的 lastSeenDate: ${lastSeenDate}`);
+
+  // 检查日期是否匹配当天
+  const todayDateISO = new Date().toISOString().split('T')[0]; // 格式化为 YYYY-MM-DD
+  if (lastSeenDate !== todayDateISO) {
+    $.log('lastSeenID 日期不匹配当天');
+    $.desc = '❌lastSeenID 日期不匹配当天';
+    return;
+  }
+
+  // 构造 POST 请求体
+  const postBody = {
+    [`commentform_${postId}_submitted`]: "1",
+    csrfKey: csrfKey,
+    _contentReply: "1",
+    MAX_FILE_SIZE: "2097152",
+    plupload: plupload,
+    [`topic_comment_${postId}`]: "<p>每日签到</p>",
+    [`topic_comment_${postId}_upload`]: topicCommentUpload,
+    topic_auto_follow: "0",
+    currentPage: "1",
+    _lastSeenID: lastSeenID
+  };
+
+  // 发送签到请求
+  const checkinOpts = {
+    url: topicUrl,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: Object.keys(postBody).map(key => `${key}=${encodeURIComponent(postBody[key])}`).join("&")
+  };
+
+  try {
+    const resp = await $.http.post(checkinOpts);
+    const responseBody = JSON.parse(resp.body);
+    $.log(JSON.stringify(responseBody));
+
+    // 判断签到是否成功
+    if (responseBody.type === "redirect" && responseBody.url) {
+      $.log('签到成功');
+      $.desc = `✅签到成功`;
+    } else {
+      $.log('签到异常');
+      $.desc = `❌签到异常，${responseBody.content || '未知错误'}`;
+    }
+  } catch (err) {
+    $.log(err);
+    $.log('签到失败');
+    $.desc = `❌签到失败，详情:${err}`;
+  }
 }
 
 // Boxjs.Env
