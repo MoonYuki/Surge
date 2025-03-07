@@ -48,6 +48,16 @@ async function checkIn() {
     return `${year}${month}${day}`;
   }
 
+  // 获取当天日期，格式为 YYYYMMDD
+  function getTodayDateWithZero() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // 补零
+    const day = String(today.getDate()).padStart(2, '0'); // 补零
+    return `${year}${month}${day}`;
+  }
+
+console.log(getTodayDate()); // 示例输出: 20250306
   // 获取签到区页面内容
   const forumUrl = "https://sstm.moe/forum/72-%E5%90%8C%E7%9B%9F%E7%AD%BE%E5%88%B0%E5%8C%BA/";
   const forumResponse = await $.http.get({
@@ -122,7 +132,7 @@ async function checkIn() {
     _contentReply: "1",
     MAX_FILE_SIZE: "2097152",
     plupload: plupload,
-    [`topic_comment_${postId}`]: "<p>每日签到</p>",
+    [`topic_comment_${postId}`]: [`<p>每日签到${getTodayDateWithZero}</p>`],
     [`topic_comment_${postId}_upload`]: topicCommentUpload,
     topic_auto_follow: "0",
     currentPage: "1",
