@@ -124,7 +124,8 @@ console.log(getTodayDate()); // 示例输出: 20250306
   }
   const topicCommentUpload = uploaderMatch[1];
   $.log(`提取的 topic_comment_${postId}_upload: ${topicCommentUpload}`);
-
+  const dateString = getTodayDateWithZero();
+  
   // 构造 POST 请求体
   const postBody = {
     [`commentform_${postId}_submitted`]: "1",
@@ -132,7 +133,7 @@ console.log(getTodayDate()); // 示例输出: 20250306
     _contentReply: "1",
     MAX_FILE_SIZE: "2097152",
     plupload: plupload,
-    [`topic_comment_${postId}`]: [`<p>每日签到${getTodayDateWithZero}</p>`],
+    [`topic_comment_${postId}`]: [`<p>每日签到${dateString}</p>`],
     [`topic_comment_${postId}_upload`]: topicCommentUpload,
     topic_auto_follow: "0",
     currentPage: "1",
