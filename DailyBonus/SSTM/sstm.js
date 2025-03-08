@@ -145,7 +145,8 @@ console.log(getTodayDate()); // 示例输出: 20250306
     url: topicUrl,
     headers: {
       ...loginInfo.headers, // 使用登录信息中的 headers
-      "Content-Type": "application/x-www-form-urlencoded"
+      "Content-Type": "application/x-www-form-urlencoded",
+      "x-requested-with": "XMLHttpRequest"
     },
     body: Object.keys(postBody).map(key => `${key}=${encodeURIComponent(postBody[key])}`).join("&")
   };
