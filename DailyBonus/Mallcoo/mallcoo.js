@@ -17,7 +17,7 @@ function getSession() {
   $.log('开始获取会话');
   const session = {
     headers: $request.headers,
-    body: $request.body ? JSON.parse($request.body) : null
+    body: $request.body
   };
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
