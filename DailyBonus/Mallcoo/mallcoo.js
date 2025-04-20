@@ -34,7 +34,7 @@ async function checkIn() {
   const checkinOpts = $.getjson($.KEY_login);
   if (!checkinOpts) {
     $.log('没有获取会话');
-    $.desc = '⚠️请打开上海停车app，登录后获取会话';
+    $.desc = '⚠️请打开恒越广场小程序，签到后获取会话';
   } else {
     checkinOpts.url = 'https://m.mallcoo.cn/api/user/User/CheckinV2';
     try {
