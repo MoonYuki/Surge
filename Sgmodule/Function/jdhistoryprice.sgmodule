@@ -6,4 +6,4 @@
 京东比价token=type=http-request, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$, script-path=https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
 
 [MITM]
-hostname = %APPEND% in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
+hostname = %APPEND% in.m.jd.com,apapia-sqk-weblogic.manmanbuy.com
