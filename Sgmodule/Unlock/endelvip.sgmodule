@@ -3,9 +3,6 @@
 #!category=解锁模块
 #!author=MoonYuki
 
-[Script]
-Endel=type=http-response,pattern=^https:\/\/api-production\.endel\.io\/v4\/call$,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Endel.js
-
 [Body Rewrite]
 http-response-jq ^https:\/\/api-production\.endel\.io\/v4\/call$ '.subscription |= {"promo_type":"DEFAULT","period":"NOPERIOD","store_trial":true,"time_left":4685854580,"price_id":"unknown","valid_until":1669710512,"type":"ACTIVE","trial_type":"CALENDAR_BASED","cancel_at_period_end":true,"multiple_subscriptions":true,"store":"APP_STORE","trial_canceled":true}'
 
