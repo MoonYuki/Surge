@@ -1,5 +1,6 @@
 #!name=github 429
 #!desc=解决github速率限制返回429问题
+#!category=功能模块
 
 [Header Rewrite]
 # 解决github速率限制返回429问题
