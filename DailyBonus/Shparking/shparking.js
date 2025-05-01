@@ -15,8 +15,12 @@ $.isRequest = typeof $request !== 'undefined';
 
 function getSession() {
   $.log('开始获取会话');
+  const headers = {...$request.headers};
+  delete headers.versionname;
+  delete headers.sm2auth;
+  
   const session = {
-    headers: $request.headers
+    headers: headers
   };
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
