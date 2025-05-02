@@ -13,3 +13,5 @@ DOMAIN,qh-material.taobao.com,REJECT-TINYGIF,extended-matching,pre-matching
 [Body Rewrite]
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/getlaunchad\/v2$ '.data.adList = []'
 
+[MITM]
+hostname = %APPEND% switch.jumpvg.com
