@@ -7,9 +7,11 @@
 # 开屏广告
 DOMAIN,www.vgjump.com,REJECT,extended-matching,pre-matching
 DOMAIN,zlsdk.1rtb.net,REJECT,extended-matching,pre-matching
-DOMAIN,s3plus.meituan.net,REJECT-TINYGIF,extended-matching,pre-matching
-DOMAIN,images.pinduoduo.com,REJECT-TINYGIF,extended-matching,pre-matching
-DOMAIN,qh-material.taobao.com,REJECT-TINYGIF,extended-matching,pre-matching
+DOMAIN,jp.ad.gameley.com,REJECT,extended-matching,pre-matching
+DOMAIN,toblog.ctobsnssdk.com,REJECT,extended-matching,pre-matching
+DOMAIN,s3plus.meituan.net,REJECT,extended-matching,pre-matching
+DOMAIN,images.pinduoduo.com,REJECT,extended-matching,pre-matching
+DOMAIN,qh-material.taobao.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,admobile.top,REJECT,extended-matching,pre-matching
 
 [Body Rewrite]
