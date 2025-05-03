@@ -11,6 +11,7 @@
 
 [Rule]
 DOMAIN,render-web.11222.cn,REJECT,extended-matching,pre-matching
+DOMAIN,p2-lm.adukwai.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 ^https:\/\/ocean\.shuqireader\.com\/api\/render\/load\/resource - reject
