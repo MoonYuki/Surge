@@ -15,8 +15,6 @@ DOMAIN-SUFFIX,admobile.top,REJECT,extended-matching,pre-matching
 
 [Body Rewrite]
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/getlaunchad\/v2$ 'del(.data.adList)|.data.launchAd.showType = 0'
-http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/mine\/userinfo$ '.data.authInfo = {"plusEndTime":3313497600000}'
-http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/plus\/info$ '.data.plusId = 10007620|.data.endTime = 3313497600000|.data.openDays = 1|.data.plusStatus = 1|.data.goldDouble = 2|.data.memberType = 1|.data.lotteryDouble = 2|.data.endTimeStr = "2075.01.01"'
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/recommend\/ad_conf$ '.data = []'
 
 [MITM]
