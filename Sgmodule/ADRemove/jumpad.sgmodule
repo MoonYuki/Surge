@@ -3,6 +3,16 @@
 #!category=去广告模块
 #!author=MoonYuki
 
+[Rule]
+# 开屏广告
+DOMAIN,zlsdk.1rtb.net,REJECT,extended-matching,pre-matching
+DOMAIN,jp.ad.gameley.com,REJECT,extended-matching,pre-matching
+DOMAIN,toblog.ctobsnssdk.com,REJECT,extended-matching,pre-matching
+DOMAIN,s3plus.meituan.net,REJECT,extended-matching,pre-matching
+DOMAIN,images.pinduoduo.com,REJECT,extended-matching,pre-matching
+DOMAIN,qh-material.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,admobile.top,REJECT,extended-matching,pre-matching
+
 [Body Rewrite]
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/getlaunchad\/v2$ 'del(.data.adList)|.data.launchAd.showType = 0'
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/mine\/userinfo$ '.data.authInfo = {"plusEndTime":3313497600000}'
@@ -10,4 +20,4 @@ http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/plus\/info$ '.data.plusId 
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/recommend\/ad_conf$ '.data = []'
 
 [MITM]
-hostname = %APPEND% switch.jumpvg.com api-v3.mentamob.com
+hostname = %APPEND% switch.jumpvg.com
