@@ -1,0 +1,18 @@
+#!name=中国移动去广告
+#!desc=移除开屏广告。
+#!author=moonyuki
+#!category=iKeLee
+#!date=
+
+[Rule]
+# 开屏广告
+DOMAIN,adservice.sigmob.cn,REJECT,extended-matching,pre-matching
+
+[URL Rewrite]
+# 首页横幅
+^https?:\/\/client-api-v2.oray.com\/materials\/SLCC_iOS_DEVICE_FREE\? - reject
+^https?:\/\/client-api-v2.oray.com\/materials\/SLCC_IOS_STARTUP\? - reject
+^https?:\/\/client-api-v2.oray.com\/materials\/SLCC_IOS_HOTSTARTUP_INSERT\? - reject
+
+[MITM]
+hostname = %APPEND% client-api-v2.oray.com
