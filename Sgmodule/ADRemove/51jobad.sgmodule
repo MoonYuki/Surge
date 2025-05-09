@@ -1,0 +1,10 @@
+#!name=前程无忧去广告
+#!desc=前程无忧去掉开屏广告
+#!category=去广告模块
+#!author=MoonYuki
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/cupid\.(51job|51jobapp)\.com\/open\/noauth\/recommend\/job-tab-dynamic.*$ 'del(.resultbody.adsTabFeeds)'
+
+[MITM]
+hostname = %APPEND% cupid.51job.com cupid.51jobapp.com
