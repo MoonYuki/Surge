@@ -1,7 +1,6 @@
 #!name=Pillow
 #!desc=Pillow解锁
 #!category=解锁模块
-#!author=MoonYuki
 
 [Body Rewrite]
 http-response-jq ^https?:\/\/api\.rc-backup\.com\/v1\/subscribers\/[^\/]+$ '.subscriber+={"entitlements":{"premium":{"expires_date":"2099-12-31T23:59:59Z","grace_period_expires_date":null,"product_identifier":"com.neybox.pillow.premium.year","purchase_date":"2023-01-01T00:00:00Z"}},"original_application_version":"","original_purchase_date":"2023-01-01T00:00:00Z","subscriptions":{"com.neybox.pillow.premium.year":{"billing_issues_detected_at":null,"expires_date":"2099-12-31T23:59:59Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2023-01-01T00:00:00Z","ownership_type":"PURCHASED","period_type":"active","purchase_date":"2023-01-01T00:00:00Z","store":"app_store","unsubscribe_detected_at":null}}}|.is_premium=true|.vip_expire_date="2099-12-31T23:59:59Z"|.subscription_status="active"'
