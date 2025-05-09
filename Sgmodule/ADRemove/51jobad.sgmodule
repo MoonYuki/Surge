@@ -4,7 +4,8 @@
 #!author=MoonYuki
 
 [Body Rewrite]
-http-response-jq ^https?:\/\/cupid\.(51job|51jobapp)\.com\/open\/noauth\/recommend\/job-tab-dynamic.*$ '.resultbody.adsTabFeeds.isshowad="-1"'
+http-response-jq ^https?:\/\/appapi\.51job\.com\/api\/market\/get_launch\.php.*$ 'del(.resultbody.person)'
+http-response-jq ^https?:\/\/cupid\.(51job|51jobapp)\.com\/open\/noauth\/recommend\/job-tab-dynamic.*$ 'del(.resultbody.adsTabFeeds)'
 
 [MITM]
-hostname = %APPEND% cupid.51job.com cupid.51jobapp.com
+hostname = %APPEND% appapi.51job.com cupid.51job.com cupid.51jobapp.com
