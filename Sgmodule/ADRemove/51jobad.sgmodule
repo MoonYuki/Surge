@@ -12,4 +12,4 @@ http-response-jq ^https?:\/\/appapi\.(51job|51jobapp)\.com\/api\/market\/get_lau
 http-response-jq ^https?:\/\/cupid\.(51job|51jobapp)\.com\/open\/noauth\/recommend\/job-tab-dynamic.*$ 'del(.resultbody.adsTabFeeds)'
 
 [MITM]
-hostname = %APPEND% *.51job.com *.51jobapp.com
+hostname = %APPEND% *.51job.com *.51jobapp.com *.51jobcdn.com
