@@ -4,7 +4,7 @@
 #!author=MoonYuki
 
 [Rule]
-DOMAIN,sysdk.cl2009.com,reject
+DOMAIN,sysdk.cl2009.com,reject,extended-matching,pre-matching
 
 [Body Rewrite]
 # 开屏广告
