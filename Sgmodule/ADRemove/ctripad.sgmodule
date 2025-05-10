@@ -5,7 +5,7 @@
 
 [Body Rewrite]
 # 开屏广告
-http-response-jq ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/tripAds$ 'del(.seats[].ads, .ResponseStatus.Timestamp)'
+http-response-jq ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/tripAds$ 'del(.seats[].ads, .ResponseStatus)'
 
 [MITM]
 hostname = %APPEND% m.ctrip.com
