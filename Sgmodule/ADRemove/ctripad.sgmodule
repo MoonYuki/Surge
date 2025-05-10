@@ -1,0 +1,11 @@
+#!name=智行火车票去广告
+#!desc=智行火车票去掉开屏广告
+#!category=去广告模块
+#!author=MoonYuki
+
+[Body Rewrite]
+# 开屏广告
+http-response-jq ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/tripAds$ 'del(.resultbody.person)'
+
+[MITM]
+hostname = %APPEND% m.ctrip.com
