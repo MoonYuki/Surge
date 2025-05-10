@@ -3,10 +3,6 @@
 #!category=去广告模块
 #!author=MoonYuki
 
-[URL Rewrite]
-# 开屏广告
-^https?:\/\/scdata\.51jobapp\.com\/sa.*$ - reject
-
 [Body Rewrite]
 # 开屏广告
 http-response-jq ^https?:\/\/appapi\.(51job|51jobapp)\.com\/api\/market\/get_launch.*$ 'del(.resultbody.person)'
