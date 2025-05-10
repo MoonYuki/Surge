@@ -12,4 +12,4 @@ http-response-jq ^https?:\/\/appapi\.(51job|51jobapp)\.com\/api\/market\/get_lau
 http-response-jq ^https?:\/\/cupid\.(51job|51jobapp)\.com\/open\/noauth\/recommend\/job-tab-dynamic.*$ 'del(.resultbody.adsTabFeeds)'
 
 [MITM]
-hostname = %APPEND% *.51job.com *.51jobapp.com *.51jobcdn.com sofire.baidu.com *.my-imcloud.com license.vod2.myqcloud.com test-dev-mobile-project-sls.cn-shanghai.log.aliyuncs.com ios.bugly.qq.com 119.29.29.98
+hostname = %APPEND% *.51job.com *.51jobapp.com
