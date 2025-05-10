@@ -3,6 +3,9 @@
 #!category=去广告模块
 #!author=MoonYuki
 
+[Rule]
+DOMAIN,sysdk.cl2009.com,reject
+
 [Body Rewrite]
 # 开屏广告
 http-response-jq ^https?:\/\/appapi\.(51job|51jobapp)\.com\/api\/market\/get_launch.*$ '.resultbody.person[0].startdate="4070880000"|.resultbody.person[0].enddate="4070966400"'
