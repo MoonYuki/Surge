@@ -1,0 +1,10 @@
+#!name=colamanaga漫画
+#!desc=colamanaga漫画去广告（配合safari内容拦截器）
+#!category=去广告模块
+#!author=MoonYuki
+
+[Script]
+colamanaga.ad.js=type=http-response,pattern=^https?:\/\/www\.colamanga\.com\/.*\.html$,requires-body=true,max-size=16384,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/refs/heads/main/Script/Colamanaga/colamanagaad.js
+
+[MITM]
+hostname = %APPEND% www.colamanga.com
