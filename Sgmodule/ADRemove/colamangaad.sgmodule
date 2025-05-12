@@ -1,0 +1,9 @@
+#!name=colamanga去网页广告
+#!desc=colamanga去除弹窗广告
+#!category=去广告模块
+#!author=MoonYuki
+
+[Rule]
+DOMAIN-SUFFIX,cloudfront.net,REJECT
+DOMAIN-SUFFIX,natterresail.com,REJECT
+DOMAIN-SUFFIX,diligencejusticeimprobable.com,REJECT
