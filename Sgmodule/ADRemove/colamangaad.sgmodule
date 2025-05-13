@@ -8,3 +8,4 @@ DOMAIN-SUFFIX,cloudfront.net,REJECT
 DOMAIN-SUFFIX,natterresail.com,REJECT
 DOMAIN-SUFFIX,diligencejusticeimprobable.com,REJECT
 DOMAIN-SUFFIX,theetheks.com,REJECT
+DOMAIN-SUFFIX,fleraprt.com,REJECT
