@@ -9,3 +9,6 @@ DOMAIN-SUFFIX,natterresail.com,REJECT
 DOMAIN-SUFFIX,diligencejusticeimprobable.com,REJECT
 DOMAIN-SUFFIX,theetheks.com,REJECT
 DOMAIN-SUFFIX,fleraprt.com,REJECT
+DOMAIN-SUFFIX,adskeeper.com,REJECT
+DOMAIN-SUFFIX,adskeeper.co.uk,REJECT
+DOMAIN-SUFFIX,tenserrelents.com,REJECT
