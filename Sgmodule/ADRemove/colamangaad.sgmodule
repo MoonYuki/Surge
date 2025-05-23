@@ -4,11 +4,16 @@
 #!author=MoonYuki
 
 [Rule]
-DOMAIN-SUFFIX,cloudfront.net,REJECT
-DOMAIN-SUFFIX,natterresail.com,REJECT
-DOMAIN-SUFFIX,diligencejusticeimprobable.com,REJECT
-DOMAIN-SUFFIX,theetheks.com,REJECT
-DOMAIN-SUFFIX,fleraprt.com,REJECT
-DOMAIN-SUFFIX,adskeeper.com,REJECT
+DOMAIN-SUFFIX,adform.net,REJECT
 DOMAIN-SUFFIX,adskeeper.co.uk,REJECT
+DOMAIN-SUFFIX,adskeeper.com,REJECT
+DOMAIN-SUFFIX,cdnpf.com,REJECT
+DOMAIN-SUFFIX,cloudfront.net,REJECT
+DOMAIN-SUFFIX,createjs.com,REJECT
+DOMAIN-SUFFIX,diligencejusticeimprobable.com,REJECT
+DOMAIN-SUFFIX,fleraprt.com,REJECT
+DOMAIN-SUFFIX,natterresail.com,REJECT
+DOMAIN-SUFFIX,pubfuture-ad.com,REJECT
+DOMAIN-SUFFIX,runative-syndicate.com,REJECT
 DOMAIN-SUFFIX,tenserrelents.com,REJECT
+DOMAIN-SUFFIX,theetheks.com,REJECT
