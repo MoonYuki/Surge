@@ -8,7 +8,7 @@
 恒越广场签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Mallcoo/mallcoo.js
 
 # 获取恒越广场会话
-获取恒越广场会话=type=http-request,requires-body=true,pattern=^https?:\/\/m.mallcoo.cn\/api\/user\/user\/GetUserAndMallCard$,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Mallcoo/mallcoo.js
+获取恒越广场会话=type=http-request,requires-body=true,pattern=^https?:\/\/m\.mallcoo\.cn\/api\/user\/User\/GetCheckinDetail$,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Mallcoo/mallcoo.js
 
 [MITM]
 hostname = %APPEND% m.mallcoo.cn
