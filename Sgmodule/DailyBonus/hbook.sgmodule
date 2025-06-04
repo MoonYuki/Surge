@@ -5,7 +5,7 @@
 
 [Script]
 # 创建刺猬猫签到脚本
-刺猬猫签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
+刺猬猫签到=type=cron,cronexp="0 0 7 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
 
 # 获取刺猬猫会话
 获取刺猬猫会话=type=http-request,pattern=^https:\/\/app\.hbooker\.com\/task\/get_all_task_list,script-path=https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
