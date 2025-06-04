@@ -5,7 +5,7 @@
 
 [Script]
 # 创建上海停车签到脚本
-上海停车签到=type=cron,cronexp="0 0 9 * * ?",script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Shparking/shparking.js
+上海停车签到=type=cron,cronexp="0 0 7 * * ?",script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Shparking/shparking.js
 
 # 获取上海停车会话
 获取上海停车会话=type=http-request,pattern=^https?:\/\/api\.shanghai\-parking\.com\/sas\/shcx\/app\/score\/credits\-change,script-path=https://raw.githubusercontent.com/MoonYuki/Surge/main/DailyBonus/Shparking/shparking.js
