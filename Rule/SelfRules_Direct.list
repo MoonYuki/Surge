@@ -1,6 +1,6 @@
 # > DOMAIN域名完全匹配
 DOMAIN,v4.plex.tv
-DOMAIN,mazu.m.qq.com
+DOMAIN,mazu.m.qq.com // 泡泡玛特
 # > DOMAIN-SUFFIX域名后缀匹配
 DOMAIN-SUFFIX,amazonaws.com
 DOMAIN-SUFFIX,huatuocode.huatuo.qq.com // 王者荣耀
