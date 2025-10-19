@@ -1,0 +1,10 @@
+#!name=提词器
+#!desc=提词器解锁
+#!category=解锁模块
+#!author=moonyuki
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/falcon\.scannerking\.top\/rp\/infoUser$ '.data |= (.products = [{"BuyMS":1735660799000,"ProductId":"prompter_week_AutoRenew","TryExpireMS":4102415999000,"ExpireMS":4102415999000}] | .expireMS = 4102415999000 | .tryExpireMS = 4102415999000 | .idenInt = 1 | del(.userHeadUrl))'
+
+[MITM]
+hostname = %APPEND% falcon.scannerking.top
