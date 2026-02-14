@@ -10,3 +10,4 @@ DOMAIN-SUFFIX,plex.direct
 # > DOMAIN-KEYWORD域名关键词匹配
 DOMAIN-KEYWORD,speedtest
 DOMAIN-KEYWORD,m-team // 馒头PT站
+DOMAIN-KEYWORD,meituan // 美团
