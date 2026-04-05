@@ -17,7 +17,9 @@ function getSession() {
   $.log('开始获取会话');
   const session = {
     headers: $request.headers,
-    body: JSON.parse($request.body)
+    body: typeof $request.body === 'string'
+  ? JSON.parse($request.body)
+  : $request.body
   };
     $.log(JSON.stringify(session));
   if ($.setjson(session, $.KEY_login)) {
@@ -39,7 +41,9 @@ async function checkIn() {
     checkinOpts.url = 'https://m.mallcoo.cn/api/user/User/CheckinV2';
     try {
       const resp = await $.http.post(checkinOpts);
-      const responseBody = JSON.parse(resp.body);
+      const responseBody = typeof resp.body === 'string'
+  ? JSON.parse(resp.body)
+  : resp.body;
       $.log(JSON.stringify(responseBody));
       $.desc = `${responseBody.d.Msg}`;
     } catch (err) {
