@@ -1,2 +1,4 @@
 # > DOMAIN域名完全匹配
 DOMAIN,0o.zxcstxt.abc
+# > DOMAIN-KEYWORD域名关键词匹配
+DOMAIN-KEYWORD,adlaunch
