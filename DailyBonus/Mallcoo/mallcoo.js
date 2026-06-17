@@ -6,117 +6,141 @@ $.isRequest = typeof $request !== 'undefined';
   if ($.isRequest) {
     getSession();
   } else {
-    await checkIn();
+    await checkInAll();
   }
   showMsg();
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
 
+/**
+ * 抓包获取/更新会话（支持多账号自动去重和更新）
+ */
 function getSession() {
   $.log('开始获取会话');
-  const reqBody = $request.body;
-  if (!reqBody) {
-    $.log('❌ 未获取到请求体，跳过');
-    return;
-  }
-
   try {
-    const bodyObj = JSON.parse(reqBody);
-    const userId = bodyObj.UserID;
-    if (!userId) {
-      $.log('❌ 未能在请求体中找到 UserID');
+    const requestBody = JSON.parse($request.body);
+    const token = requestBody.Header && requestBody.Header.Token;
+
+    if (!token) {
+      $.log('抓包请求体中未找到 Token，跳过记录');
       return;
     }
 
-    // 构建当前账号的会话数据
-    const currentSession = {
+    const newSession = {
       headers: $request.headers,
-      body: reqBody
+      body: $request.body
     };
 
-    // 读取本地已保存的所有账号列表（格式为对象，以 UserID 作为 key 方便去重）
-    let accountMap = $.getjson($.KEY_login) || {};
-    
-    // 如果是老版本存储的单账号数据（格式为包含 headers 的对象），转换成新格式
-    if (accountMap.headers && !accountMap[userId]) {
-      accountMap = {}; 
+    // 读取现有账号列表，如果不存在则初始化为空数组
+    let accountList = $.getjson($.KEY_login) || [];
+    if (!Array.isArray(accountList)) {
+      // 兼容旧版本的单账号数据
+      accountList = accountList.body ? [accountList] : [];
     }
 
-    // 将当前账号存入/更新到集合中
-    accountMap[userId] = currentSession;
+    // 查找是否已存在相同 Token 的账号
+    const existingIndex = accountList.findIndex(acc => {
+      try {
+        const body = JSON.parse(acc.body);
+        return body.Header && body.Header.Token === token;
+      } catch (e) {
+        return false;
+      }
+    });
 
-    if ($.setjson(accountMap, $.KEY_login)) {
-      const accountCount = Object.keys(accountMap).length;
-      $.log(`🎉 成功获取账号 [${userId}] 的会话，当前共保存 ${accountCount} 个账号`);
-      $.desc = `🎉 成功获取账号 [${userId}] 的会话\n当前共保存 ${accountCount} 个账号`;
+    if (existingIndex !== -1) {
+      // 存在则更新旧会话
+      accountList[existingIndex] = newSession;
+      $.log(`更新已有账号成功，Token: ${token.substring(0, 8)}...`);
+      $.desc = '🎉成功更新已有账号会话';
     } else {
-      $.log('❌ 保存会话失败');
-      $.desc = '❌ 获取会话失败，保存数据时出错';
+      // 不存在则追加新账号
+      accountList.push(newSession);
+      $.log(`成功添加新账号，Token: ${token.substring(0, 8)}...`);
+      $.desc = `🎉成功获取第 ${accountList.length} 个账号的会话`;
     }
-  } catch (e) {
-    $.logErr(e);
-    $.desc = '❌ 解析会话数据失败';
+
+    $.setjson(accountList, $.KEY_login);
+  } catch (err) {
+    $.logErr(err);
+    $.desc = '❌解析或保存会话失败';
   }
 }
 
-async function checkIn() {
+/**
+ * 遍历所有账号进行签到
+ */
+async function checkInAll() {
   $.log('开始多账号签到');
-  const accountMap = $.getjson($.KEY_login);
+  let accountList = $.getjson($.KEY_login) || [];
   
-  if (!accountMap || Object.keys(accountMap).length === 0) {
-    $.log('没有获取会话');
-    $.desc = '⚠️ 请打开恒越广场小程序获取会话';
+  // 兼容旧版本单账号数据结构
+  if (!Array.isArray(accountList)) {
+    accountList = accountList.body ? [accountList] : [];
+  }
+
+  if (accountList.length === 0) {
+    $.log('没有获取到任何账号会话');
+    $.desc = '⚠️没有获取到账号信息，请打开恒越广场小程序获取会话';
     return;
   }
 
-  // 如果读取出来的是老版本的单账号格式，包装成标准多账号格式处理
-  let accounts = [];
-  if (accountMap.headers && accountMap.body) {
-    try {
-      const oldUserId = JSON.parse(accountMap.body).UserID || '未知账号';
-      accounts.push({ userId: oldUserId, opts: accountMap });
-    } catch(e) {
-      accounts.push({ userId: '未知账号', opts: accountMap });
-    }
-  } else {
-    // 标准多账号格式：提取出数组
-    accounts = Object.keys(accountMap).map(userId => ({
-      userId: userId,
-      opts: accountMap[userId]
-    }));
-  }
+  $.log(`共发现 ${accountList.length} 个账号，开始依次签到...`);
+  const msgList = [];
+  const accountsToDelete = []; // 记录需要删除的失效账号索引
 
-  $.log(`📋 检测到 ${accounts.length} 个账号准备签到\n`);
-  
-  let msgArray = [];
-
-  // 循环遍历所有账号执行签到
-  for (let i = 0; i < accounts.length; i++) {
-    const acc = accounts[i];
-    $.log(`【账号 ${i + 1} / ${accounts.length}】开始签到 (UserID: ${acc.userId})`);
+  for (let i = 0; i < accountList.length; i++) {
+    const checkinOpts = accountList[i];
+    let tokenText = `账号 [${i + 1}]`;
     
-    let checkinOpts = { ...acc.opts };
+    try {
+      const bodyObj = JSON.parse(checkinOpts.body);
+      if (bodyObj.Header && bodyObj.Header.Token) {
+        tokenText = `账号 [${bodyObj.Header.Token.substring(0, 6)}...]`;
+      }
+    } catch (e) {}
+
+    $.log(`\n------ 开始签到 ${tokenText} ------`);
     checkinOpts.url = 'https://m.mallcoo.cn/api/user/User/CheckinV2';
 
     try {
       const resp = await $.http.post(checkinOpts);
       const responseBody = JSON.parse(resp.body);
-      $.log(`账号 [${acc.userId}] 响应: ${JSON.stringify(responseBody)}`);
-      
-      const resMsg = responseBody.d ? responseBody.d.Msg : '未知返回';
-      msgArray.push(`账号[${acc.userId}]: ${resMsg}`);
+      $.log(JSON.stringify(responseBody));
+
+      // 判断 Token 是否过期 (错误码 320)
+      if (responseBody.m === 320 || responseBody.e?.includes('已过期') || responseBody.e?.includes('错误')) {
+        $.log(`${tokenText} Token已过期，加入待删除队列`);
+        msgList.push(`${tokenText} ❌ Token已过期，已自动清除该账号`);
+        accountsToDelete.push(i); // 记录索引
+      } else if (responseBody.d && responseBody.d.Msg) {
+        // 签到成功或重复签到
+        msgList.push(`${tokenText} 📜 ${responseBody.d.Msg}`);
+      } else {
+        msgList.push(`${tokenText} ❓ 状态未知: ${responseBody.e || '无错误信息'}`);
+      }
     } catch (err) {
-      $.logErr(err);
-      msgArray.push(`账号[${acc.userId}]: ❌ 签到失败`);
+      $.log(err);
+      msgList.push(`${tokenText} ❌ 脚本请求失败`);
     }
     
-    // 稍微等待 1 秒，防止请求过快被服务器风控
-    if (i < accounts.length - 1) await $.wait(1000);
+    // 账号间稍作延迟，防止并发过快
+    await $.wait(1000);
   }
 
-  // 组装最终弹窗通知的信息
-  $.desc = msgArray.join('\n');
+  // 倒序删除失效的账号（倒序删除可以保证索引不错位）
+  if (accountsToDelete.length > 0) {
+    for (let i = accountsToDelete.length - 1; i >= 0; i--) {
+      accountList.splice(accountsToDelete[i], 1);
+    }
+    // 写回本地存储
+    $.setjson(accountList, $.KEY_login);
+    $.log(`\n已清理 ${accountsToDelete.length} 个过期账号，剩余可用账号数: ${accountList.length}`);
+  }
+
+  // 汇总通知内容
+  $.desc = msgList.join('\n');
 }
 
 function showMsg() {
