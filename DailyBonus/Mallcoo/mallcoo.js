@@ -4,7 +4,7 @@ $.isRequest = typeof $request !== 'undefined';
 
 !(async () => {
   if ($.isRequest) {
-    getSession();
+    await getSession();
   } else {
     await checkInAll();
   }
@@ -14,15 +14,69 @@ $.isRequest = typeof $request !== 'undefined';
   .finally(() => $.done());
 
 /**
- * 抓包获取/更新会话（支持多账号自动去重和更新）
+ * 核心方法：获取用户信息
  */
-function getSession() {
-  $.log('开始获取会话');
+async function getUserInfo(opts) {
+  const userOpts = JSON.parse(JSON.stringify(opts));
+  userOpts.url = 'https://m.mallcoo.cn/api/user/user/GetUserAndMallCard';
+  
+  try {
+    const resp = await $.http.post(userOpts);
+    const res = JSON.parse(resp.body);
+    if (res.m === 1 && res.d) {
+      return {
+        cardNo: res.d.CardNo || '',
+        nickName: res.d.NickName || '未知用户',
+        bonus: res.d.Bonus ?? 0,
+        cardTitle: res.d.CardTitleUP || '普通会员'
+      };
+    } else if (res.m === 320 || res.e?.includes('已过期') || res.e?.includes('错误')) {
+      return { isExpired: true };
+    }
+  } catch (err) {
+    $.log(`获取用户信息网络请求失败: ${err}`);
+  }
+  return null;
+}
+
+/**
+ * 校验并获取兼容的账号列表，若不兼容则清空并返回 false
+ */
+function getValidAccountList() {
+  let accountList = $.getjson($.KEY_login);
+  
+  if (!accountList) return [];
+
+  // 1. 如果根本不是数组（极早期版本单账号格式），判定为不兼容
+  if (!Array.isArray(accountList)) {
+    $.log('⚠️ 检测到旧版本单账号配置格式，正在自动清理并提示重抓...');
+    $.setjson([], $.KEY_login); // 清空旧数据
+    return false;
+  }
+
+  // 2. 如果是数组，但里面的元素是上一个版本基于 Token 的数据（缺少 cardNo 属性）
+  if (accountList.length > 0) {
+    const hasOldData = accountList.some(acc => !acc.hasOwnProperty('cardNo'));
+    if (hasOldData) {
+      $.log('⚠️ 检测到旧版本多账号配置格式（缺少CardNo唯一标识），正在自动清理并提示重抓...');
+      $.setjson([], $.KEY_login); // 清空旧数据
+      return false;
+    }
+  }
+
+  return accountList;
+}
+
+/**
+ * 抓包获取/更新会话
+ */
+async function getSession() {
+  $.log('开始获取会话...');
   try {
     const requestBody = JSON.parse($request.body);
-    const token = requestBody.Header && requestBody.Header.Token;
+    const currentToken = requestBody.Header && requestBody.Header.Token;
 
-    if (!token) {
+    if (!currentToken) {
       $.log('抓包请求体中未找到 Token，跳过记录');
       return;
     }
@@ -32,39 +86,45 @@ function getSession() {
       body: $request.body
     };
 
-    // 读取现有账号列表，如果不存在则初始化为空数组
-    let accountList = $.getjson($.KEY_login) || [];
-    if (!Array.isArray(accountList)) {
-      // 兼容旧版本的单账号数据
-      accountList = accountList.body ? [accountList] : [];
+    const userInfo = await getUserInfo(newSession);
+    
+    if (!userInfo || userInfo.isExpired) {
+      $.log('⚠️ 当前抓包的 Token 已失效或无法获取用户信息，跳过保存');
+      $.desc = '❌ 抓包失败：无法验证用户信息或 Token 已过期';
+      return;
     }
 
-    // 查找是否已存在相同 Token 的账号
-    const existingIndex = accountList.findIndex(acc => {
-      try {
-        const body = JSON.parse(acc.body);
-        return body.Header && body.Header.Token === token;
-      } catch (e) {
-        return false;
-      }
-    });
+    newSession.cardNo = userInfo.cardNo;
+    newSession.nickName = userInfo.nickName;
+
+    if (!newSession.cardNo) {
+      $.log('⚠️ 未能获取到有效的会员卡号(CardNo)，放弃本次去重储存');
+      return;
+    }
+
+    // 运行安全校验逻辑
+    let accountList = getValidAccountList();
+    if (accountList === false) {
+      // 说明触发了清理，当前抓包的数据作为新数组的第一条存入
+      accountList = [];
+    }
+
+    const existingIndex = accountList.findIndex(acc => acc.cardNo === newSession.cardNo);
 
     if (existingIndex !== -1) {
-      // 存在则更新旧会话
       accountList[existingIndex] = newSession;
-      $.log(`更新已有账号成功，Token: ${token.substring(0, 8)}...`);
-      $.desc = '🎉成功更新已有账号会话';
+      $.log(`🔄 [已有账号更新] 卡号: ${newSession.cardNo} | 昵称: ${newSession.nickName}`);
+      $.desc = `🎉 成功更新账号 ➔ ${newSession.nickName} (卡号: ${newSession.cardNo})`;
     } else {
-      // 不存在则追加新账号
       accountList.push(newSession);
-      $.log(`成功添加新账号，Token: ${token.substring(0, 8)}...`);
-      $.desc = `🎉成功获取第 ${accountList.length} 个账号的会话`;
+      $.log(`➕ [发现新账号追加] 卡号: ${newSession.cardNo} | 昵称: ${newSession.nickName}`);
+      $.desc = `🎉 成功添加新账号 ➔ ${newSession.nickName} (第 ${accountList.length} 个账号)`;
     }
 
     $.setjson(accountList, $.KEY_login);
   } catch (err) {
     $.logErr(err);
-    $.desc = '❌解析或保存会话失败';
+    $.desc = '❌ 解析或保存会话失败';
   }
 }
 
@@ -72,75 +132,83 @@ function getSession() {
  * 遍历所有账号进行签到
  */
 async function checkInAll() {
-  $.log('开始多账号签到');
-  let accountList = $.getjson($.KEY_login) || [];
+  $.log('开始多账号签到...');
   
-  // 兼容旧版本单账号数据结构
-  if (!Array.isArray(accountList)) {
-    accountList = accountList.body ? [accountList] : [];
+  // 运行安全校验逻辑
+  let accountList = getValidAccountList();
+  
+  // 如果返回 false，说明数据不兼容已被清空，弹窗提醒用户
+  if (accountList === false) {
+    $.desc = '⚠️ 检测到旧版脚本数据不兼容！\n为了避免签到错乱，已自动清除历史缓存。\n请重新打开【恒越广场】小程序手动获取会话！';
+    return;
   }
 
   if (accountList.length === 0) {
     $.log('没有获取到任何账号会话');
-    $.desc = '⚠️没有获取到账号信息，请打开恒越广场小程序获取会话';
+    $.desc = '⚠️ 没有获取到账号信息，请打开恒越广场小程序获取会话';
     return;
   }
 
-  $.log(`共发现 ${accountList.length} 个账号，开始依次签到...`);
+  $.log(`共发现 ${accountList.length} 个账号，开始依次处理...`);
   const msgList = [];
-  const accountsToDelete = []; // 记录需要删除的失效账号索引
+  const accountsToDelete = []; 
 
   for (let i = 0; i < accountList.length; i++) {
     const checkinOpts = accountList[i];
-    let tokenText = `账号 [${i + 1}]`;
+    let userSign = checkinOpts.nickName || checkinOpts.cardNo || `账号 [${i + 1}]`;
+
+    const userInfo = await getUserInfo(checkinOpts);
     
-    try {
-      const bodyObj = JSON.parse(checkinOpts.body);
-      if (bodyObj.Header && bodyObj.Header.Token) {
-        tokenText = `账号 [${bodyObj.Header.Token.substring(0, 6)}...]`;
-      }
-    } catch (e) {}
+    if (userInfo && userInfo.isExpired) {
+      $.log(`\n------ ${userSign} ------`);
+      $.log('❌ Token已过期，加入待删除队列');
+      msgList.push(`👤 ${userSign}\n   ❌ Token已过期，已自动清除该账号`);
+      accountsToDelete.push(i);
+      continue;
+    }
 
-    $.log(`\n------ 开始签到 ${tokenText} ------`);
+    if (userInfo) {
+      userSign = userInfo.nickName; 
+      checkinOpts.nickName = userInfo.nickName;
+    }
+
+    $.log(`\n------ 开始签到：${userSign} ------`);
+    
     checkinOpts.url = 'https://m.mallcoo.cn/api/user/User/CheckinV2';
-
     try {
       const resp = await $.http.post(checkinOpts);
       const responseBody = JSON.parse(resp.body);
       $.log(JSON.stringify(responseBody));
 
-      // 判断 Token 是否过期 (错误码 320)
       if (responseBody.m === 320 || responseBody.e?.includes('已过期') || responseBody.e?.includes('错误')) {
-        $.log(`${tokenText} Token已过期，加入待删除队列`);
-        msgList.push(`${tokenText} ❌ Token已过期，已自动清除该账号`);
-        accountsToDelete.push(i); // 记录索引
+        $.log('❌ 签到时发现 Token已过期，加入待删除队列');
+        msgList.push(`👤 ${userSign}\n   ❌ Token已过期，已自动清除`);
+        accountsToDelete.push(i);
       } else if (responseBody.d && responseBody.d.Msg) {
-        // 签到成功或重复签到
-        msgList.push(`${tokenText} 📜 ${responseBody.d.Msg}`);
+        const bonusText = userInfo ? ` (当前积分: ${userInfo.bonus})` : '';
+        msgList.push(`👤 ${userSign}${bonusText}\n   📜 ${responseBody.d.Msg}`);
       } else {
-        msgList.push(`${tokenText} ❓ 状态未知: ${responseBody.e || '无错误信息'}`);
+        msgList.push(`👤 ${userSign}\n   ❓ 状态未知: ${responseBody.e || '无错误信息'}`);
       }
     } catch (err) {
       $.log(err);
-      msgList.push(`${tokenText} ❌ 脚本请求失败`);
+      msgList.push(`👤 ${userSign}\n   ❌ 脚本网络请求失败`);
     }
     
-    // 账号间稍作延迟，防止并发过快
-    await $.wait(1000);
+    await $.wait(1200);
   }
 
-  // 倒序删除失效的账号（倒序删除可以保证索引不错位）
   if (accountsToDelete.length > 0) {
     for (let i = accountsToDelete.length - 1; i >= 0; i--) {
       accountList.splice(accountsToDelete[i], 1);
     }
-    // 写回本地存储
-    $.setjson(accountList, $.KEY_login);
-    $.log(`\n已清理 ${accountsToDelete.length} 个过期账号，剩余可用账号数: ${accountList.length}`);
+    $.log(`\n已自动清理 ${accountsToDelete.length} 个过期账号`);
   }
+  
+  $.setjson(accountList, $.KEY_login);
+  $.log(`剩余可用账号数: ${accountList.length}`);
 
-  // 汇总通知内容
-  $.desc = msgList.join('\n');
+  $.desc = msgList.join('\n\n');
 }
 
 function showMsg() {
