@@ -40,30 +40,24 @@ async function getUserInfo(opts) {
 }
 
 /**
- * 校验并获取兼容的账号列表，若不兼容则清空并返回 false
+ * 校验并获取兼容的账号列表
  */
 function getValidAccountList() {
   let accountList = $.getjson($.KEY_login);
-  
   if (!accountList) return [];
-
-  // 1. 如果根本不是数组（极早期版本单账号格式），判定为不兼容
   if (!Array.isArray(accountList)) {
-    $.log('⚠️ 检测到旧版本单账号配置格式，正在自动清理并提示重抓...');
-    $.setjson([], $.KEY_login); // 清空旧数据
+    $.log('⚠️ 检测到旧版本单账号配置格式，自动清理...');
+    $.setjson([], $.KEY_login);
     return false;
   }
-
-  // 2. 如果是数组，但里面的元素是上一个版本基于 Token 的数据（缺少 cardNo 属性）
   if (accountList.length > 0) {
     const hasOldData = accountList.some(acc => !acc.hasOwnProperty('cardNo'));
     if (hasOldData) {
-      $.log('⚠️ 检测到旧版本多账号配置格式（缺少CardNo唯一标识），正在自动清理并提示重抓...');
-      $.setjson([], $.KEY_login); // 清空旧数据
+      $.log('⚠️ 检测到旧版本多账号配置格式，自动清理...');
+      $.setjson([], $.KEY_login);
       return false;
     }
   }
-
   return accountList;
 }
 
@@ -98,16 +92,12 @@ async function getSession() {
     newSession.nickName = userInfo.nickName;
 
     if (!newSession.cardNo) {
-      $.log('⚠️ 未能获取到有效的会员卡号(CardNo)，放弃本次去重储存');
+      $.log('⚠️ 未能获取到有效的会员卡号(CardNo)，放弃储存');
       return;
     }
 
-    // 运行安全校验逻辑
     let accountList = getValidAccountList();
-    if (accountList === false) {
-      // 说明触发了清理，当前抓包的数据作为新数组的第一条存入
-      accountList = [];
-    }
+    if (accountList === false) accountList = [];
 
     const existingIndex = accountList.findIndex(acc => acc.cardNo === newSession.cardNo);
 
@@ -133,11 +123,8 @@ async function getSession() {
  */
 async function checkInAll() {
   $.log('开始多账号签到...');
-  
-  // 运行安全校验逻辑
   let accountList = getValidAccountList();
   
-  // 如果返回 false，说明数据不兼容已被清空，弹窗提醒用户
   if (accountList === false) {
     $.desc = '⚠️ 检测到旧版脚本数据不兼容！\n为了避免签到错乱，已自动清除历史缓存。\n请重新打开【恒越广场】小程序手动获取会话！';
     return;
@@ -157,47 +144,64 @@ async function checkInAll() {
     const checkinOpts = accountList[i];
     let userSign = checkinOpts.nickName || checkinOpts.cardNo || `账号 [${i + 1}]`;
 
-    const userInfo = await getUserInfo(checkinOpts);
-    
-    if (userInfo && userInfo.isExpired) {
-      $.log(`\n------ ${userSign} ------`);
-      $.log('❌ Token已过期，加入待删除队列');
-      msgList.push(`👤 ${userSign}\n   ❌ Token已过期，已自动清除该账号`);
-      accountsToDelete.push(i);
-      continue;
-    }
-
-    if (userInfo) {
-      userSign = userInfo.nickName; 
-      checkinOpts.nickName = userInfo.nickName;
-    }
-
+    // 1. 【调整】第一步：先执行签到
     $.log(`\n------ 开始签到：${userSign} ------`);
-    
     checkinOpts.url = 'https://m.mallcoo.cn/api/user/User/CheckinV2';
+    
+    let isCheckInSuccess = false; // 用于标记是否需要刷新积分
+    let checkInMsg = '';
+
     try {
       const resp = await $.http.post(checkinOpts);
       const responseBody = JSON.parse(resp.body);
       $.log(JSON.stringify(responseBody));
 
       if (responseBody.m === 320 || responseBody.e?.includes('已过期') || responseBody.e?.includes('错误')) {
-        $.log('❌ 签到时发现 Token已过期，加入待删除队列');
-        msgList.push(`👤 ${userSign}\n   ❌ Token已过期，已自动清除`);
+        $.log('❌ 发现 Token 已过期，加入待删除队列');
+        msgList.push(`👤 ${userSign}\n   ❌ Token 已过期，已自动清除该账号`);
         accountsToDelete.push(i);
+        continue; // 终止当前账号后续逻辑
       } else if (responseBody.d && responseBody.d.Msg) {
-        const bonusText = userInfo ? ` (当前积分: ${userInfo.bonus})` : '';
-        msgList.push(`👤 ${userSign}${bonusText}\n   📜 ${responseBody.d.Msg}`);
+        checkInMsg = responseBody.d.Msg;
+        // 如果返回的信息包含“成功”或者不是重复签到，代表积分变动了，标记为需要刷新
+        if (checkInMsg.includes('成功') || !checkInMsg.includes('重复')) {
+          isCheckInSuccess = true;
+        }
       } else {
-        msgList.push(`👤 ${userSign}\n   ❓ 状态未知: ${responseBody.e || '无错误信息'}`);
+        checkInMsg = `状态未知: ${responseBody.e || '无错误信息'}`;
       }
     } catch (err) {
       $.log(err);
       msgList.push(`👤 ${userSign}\n   ❌ 脚本网络请求失败`);
+      continue;
+    }
+
+    // 2. 【调整】第二步：签到请求结束后，拉取最新的用户信息（包含昵称和更新后的积分）
+    const userInfo = await getUserInfo(checkinOpts);
+    
+    if (userInfo && userInfo.isExpired) {
+      $.log('❌ 验证用户信息时发现 Token 已过期，加入待删除队列');
+      msgList.push(`👤 ${userSign}\n   ❌ Token 已过期，已自动清除该账号`);
+      accountsToDelete.push(i);
+      continue;
+    }
+
+    if (userInfo) {
+      userSign = userInfo.nickName; 
+      checkinOpts.nickName = userInfo.nickName; // 同步最新昵称到本地
+      
+      // 成功组装包含【最新实时积分】的通知
+      const bonusText = ` (当前积分: ${userInfo.bonus})`;
+      msgList.push(`👤 ${userSign}${bonusText}\n   📜 ${checkInMsg}`);
+    } else {
+      // 即使获取积分网络失败，也展示签到结果
+      msgList.push(`👤 ${userSign}\n   📜 ${checkInMsg} (最新积分获取失败)`);
     }
     
     await $.wait(1200);
   }
 
+  // 倒序删除失效账号
   if (accountsToDelete.length > 0) {
     for (let i = accountsToDelete.length - 1; i >= 0; i--) {
       accountList.splice(accountsToDelete[i], 1);
