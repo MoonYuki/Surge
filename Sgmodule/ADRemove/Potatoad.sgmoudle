@@ -44,3 +44,6 @@ DOMAIN,minigame5-normal.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,mssdk.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,timon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,vcs.zijieapi.com,REJECT,extended-matching,pre-matching
+DOMAIN,p11.douyinpic.com,REJECT,extended-matching,pre-matching
+DOMAIN,mon11-misc-lf.fqnovel.com,REJECT,extended-matching,pre-matching
+DOMAIN,p3-novel.byteimg.com,REJECT,extended-matching,pre-matching
