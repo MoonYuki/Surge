@@ -45,3 +45,4 @@ DOMAIN,mssdk.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,timon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,vcs.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,v11-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
+DOMAIN,v13-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
