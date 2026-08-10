@@ -47,3 +47,4 @@ DOMAIN,vcs.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,v11-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
 DOMAIN,v13-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
 DOMAIN,v5-se2-gddgtc-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
+DOMAIN,v95-ynkmtc-reading-video.fqnovelvod.com,REJECT,extended-matching,pre-matching
